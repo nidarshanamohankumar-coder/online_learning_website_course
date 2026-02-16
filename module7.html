@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI For All | Module 7</title>
+
+<link rel="stylesheet" href="assets/css/common.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#eef2f7;
+}
+
+.curriculum-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+.sidebar{
+  width:280px;
+  background:#ffffff;
+  border-right:4px solid #2f2f7e;
+  padding:25px;
+  overflow-y:auto;
+}
+
+.sidebar h3{
+  font-size:18px;
+  margin-bottom:20px;
+  color:#2f2f7e;
+}
+
+.module-title{
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+.module ul{
+  padding-left:0;
+}
+
+.module ul li{
+  list-style:none;
+  margin-bottom:10px;
+}
+
+.module ul li a{
+  text-decoration:none;
+  font-size:14px;
+  color:#374151;
+  padding:6px 10px;
+  display:block;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.module ul li a:hover{
+  background:#2f2f7e;
+  color:white;
+}
+
+.module.current .module-title{
+  padding:6px;
+  border-radius:6px;
+}
+
+.module.locked{
+  opacity:0.4;
+  pointer-events:none;
+  position:relative;
+}
+
+.module.locked::after{
+  content:"🔒 Complete previous quiz";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#2f2f7e;
+  color:#fff;
+  padding:4px 10px;
+  font-size:11px;
+  border-radius:5px;
+}
+
+.content-area{
+  flex:1;
+  padding:60px 70px;
+}
+
+.content-box{
+  background:#fff;
+  padding:50px;
+  max-width:900px;
+  margin:auto;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.course-title{
+  font-size:28px;
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:40px;
+  font-weight:700;
+}
+
+.course-desc h2{
+  margin-top:50px;
+  font-size:20px;
+  color:#2f2f7e;
+}
+
+.course-desc p{
+  margin-top:15px;
+  line-height:1.9;
+  font-size:15px;
+  text-align:justify;
+  color:#444;
+}
+
+.quiz-btn{
+  margin-top:50px;
+  padding:14px 35px;
+  background:linear-gradient(90deg,#2f2f7e,#2563eb);
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  font-size:15px;
+  cursor:pointer;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@media(max-width:900px){
+  .curriculum-layout{ flex-direction:column; }
+  .sidebar{
+    width:100%;
+    border-right:none;
+    border-bottom:3px solid #2f2f7e;
+  }
+  .content-area{ padding:30px 20px; }
+  .content-box{ padding:30px 20px; }
+  .course-title{ font-size:22px; }
+  .course-desc h2{ font-size:18px; }
+  .course-desc p{ font-size:14px; line-height:1.7; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="curriculum-layout">
+
+<aside class="sidebar">
+  <h3>Module 7 Outline</h3>
+
+  <div class="module current">
+    <div class="module-title">AI IN COMPUTER SCIENCE</div>
+    <ul>
+      <li><a href="#topic-7-1">7.1 AI & Algorithms</a></li>
+      <li><a href="#topic-7-2">7.2 AI in Software Development</a></li>
+      <li><a href="#topic-7-3">7.3 AI & Cybersecurity</a></li>
+      <li><a href="#topic-7-4">7.4 AI in Data Structures</a></li>
+    </ul>
+  </div>
+
+  <div class="module locked" id="module8">
+    <div class="module-title"><a href="module8.html">Module 8</a></div>
+  </div>
+</aside>
+
+<main class="content-area">
+<div class="content-box">
+
+<div class="course-title">AI IN COMPUTER SCIENCE</div>
+
+<div class="course-desc">
+
+<h2 id="topic-7-1">7.1 AI & Algorithms</h2>
+<p>
+Artificial Intelligence is deeply rooted in algorithmic design and computational theory. In Computer Science, algorithms act as step-by-step instructions that guide machines to solve problems intelligently. AI algorithms are designed to learn from data, adapt to new situations, and optimize decision-making processes over time.
+
+Traditional algorithms follow fixed rules, but AI algorithms such as machine learning models, neural networks, and heuristic search algorithms improve their performance based on experience. For example, pathfinding algorithms like A* are used in robotics and gaming environments to calculate the shortest and most efficient route between two points. Similarly, genetic algorithms simulate natural selection processes to solve optimization problems.
+
+AI algorithms also use mathematical foundations such as probability theory, linear algebra, and statistics. Concepts like gradient descent help neural networks minimize error during training. Without strong algorithmic thinking, AI systems cannot function effectively. Therefore, Computer Science provides the backbone for AI innovation.
+
+Modern AI systems integrate dynamic programming, reinforcement learning algorithms, and deep learning architectures to solve real-world problems such as speech recognition, recommendation systems, and autonomous navigation. Efficient algorithm design ensures faster computation, reduced memory usage, and scalable AI applications.</p>
+
+<h2 id="topic-7-2">7.2 AI in Software Development</h2>
+<p>
+AI is transforming the software development lifecycle by introducing automation and intelligent assistance. Traditionally, software development required manual coding, debugging, and testing. Today, AI-powered tools support developers at every stage of the process.
+
+Code completion systems analyze programming patterns and suggest relevant code snippets automatically. This reduces development time and increases accuracy. AI-based debugging tools can detect errors, security vulnerabilities, and inefficient code structures faster than manual review. These systems analyze millions of code examples to recommend optimized solutions.
+
+In testing environments, AI automates unit testing and regression testing. Machine learning models predict which parts of the application are likely to fail, helping developers focus on critical areas. Continuous integration systems use predictive analytics to improve deployment stability.
+
+AI also supports DevOps practices by monitoring system performance in real time. It predicts server overloads, system crashes, and potential failures before they occur. Intelligent chatbots assist developers by providing instant documentation references and troubleshooting suggestions.
+
+As a result, AI enhances productivity, improves software quality, and reduces development costs. The integration of AI in software engineering represents a major shift toward smarter, automated development environments.</p>
+
+<h2 id="topic-7-3">7.3 AI & Cybersecurity</h2>
+<p>
+Cybersecurity is one of the most critical domains in Computer Science, and AI plays a vital role in protecting digital systems. With the rapid increase in cyber threats, traditional rule-based security systems are no longer sufficient. AI provides adaptive and intelligent security mechanisms.
+
+Machine learning models analyze network traffic patterns to detect unusual behavior. For example, if a user suddenly attempts to access large volumes of confidential data, AI systems can flag the activity as suspicious. AI-powered intrusion detection systems continuously learn from new attack patterns and update their defense strategies.
+
+Natural Language Processing (NLP) helps identify phishing emails by analyzing suspicious language patterns. Deep learning models detect malware by examining code structures and identifying hidden threats. AI also strengthens biometric authentication systems such as facial recognition and fingerprint analysis.
+
+Another important area is behavioral analytics. AI monitors user activities and creates normal behavior profiles. If deviations occur, the system triggers alerts automatically. This proactive approach prevents cyber attacks before they cause damage.
+
+By combining big data analytics with AI, organizations achieve faster threat detection, reduced false alarms, and stronger overall security infrastructure.</p>
+
+<h2 id="topic-7-4">7.4 AI in Data Structures</h2>
+<p>
+Data structures are fundamental components of Computer Science, and AI applications heavily rely on efficient data organization. The performance of AI systems depends on how well data is stored, accessed, and processed.
+
+For example, tree data structures are used in decision trees and random forest models. Graph structures play a key role in social network analysis and recommendation systems. Linked lists and queues support real-time data streaming in AI pipelines.
+
+Hash tables enable fast data retrieval, which is essential for large-scale machine learning applications. Priority queues are used in search algorithms like A* for selecting optimal paths. Graph neural networks (GNNs) utilize advanced graph-based structures to process relational data.
+
+Efficient memory management ensures that AI models can handle massive datasets without performance degradation. Data preprocessing techniques such as normalization and feature engineering further enhance AI model accuracy.
+
+By combining optimized data structures with AI algorithms, Computer Scientists build scalable and high-performance intelligent systems capable of solving complex real-world challenges.</p>
+
+<button class="quiz-btn" onclick="goToQuiz()">Take Module 7 Quiz</button>
+
+</div>
+</div>
+</main>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/js/include.js"></script>
+<script>
+loadHTML("header","header.html");
+loadHTML("footer","footer.html");
+
+function goToQuiz(){
+  window.location.href="quiz_module7.html";
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  let highest = parseInt(localStorage.getItem("highestUnlockedModule")) || 1;
+  if(highest >= 8){
+    document.getElementById("module8").classList.remove("locked");
+  }
+});
+</script>
+
+</body>
+</html>

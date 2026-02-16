@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI For All | Module 5</title>
+
+<link rel="stylesheet" href="assets/css/common.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#eef2f7;
+}
+
+.curriculum-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+.sidebar{
+  width:280px;
+  background:#ffffff;
+  border-right:4px solid #2f2f7e;
+  padding:25px;
+  overflow-y:auto;
+}
+
+.sidebar h3{
+  font-size:18px;
+  margin-bottom:20px;
+  color:#2f2f7e;
+}
+
+.module-title{
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+.module ul{
+  padding-left:0;
+}
+
+.module ul li{
+  list-style:none;
+  margin-bottom:10px;
+}
+
+.module ul li a{
+  text-decoration:none;
+  font-size:14px;
+  color:#374151;
+  padding:6px 10px;
+  display:block;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.module ul li a:hover{
+  background:#2f2f7e;
+  color:white;
+}
+
+.module.current .module-title{
+  padding:6px;
+  border-radius:6px;
+}
+
+.module.locked{
+  opacity:0.4;
+  pointer-events:none;
+  position:relative;
+}
+
+.module.locked::after{
+  content:"🔒 Complete previous quiz";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#2f2f7e;
+  color:#fff;
+  padding:4px 10px;
+  font-size:11px;
+  border-radius:5px;
+}
+
+.content-area{
+  flex:1;
+  padding:60px 70px;
+}
+
+.content-box{
+  background:#fff;
+  padding:50px;
+  max-width:900px;
+  margin:auto;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.course-title{
+  font-size:28px;
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:40px;
+  font-weight:700;
+}
+
+.course-desc h2{
+  margin-top:50px;
+  font-size:20px;
+  color:#2f2f7e;
+}
+
+.course-desc p{
+  margin-top:15px;
+  line-height:1.9;
+  font-size:15px;
+  text-align:justify;
+  color:#444;
+}
+
+.quiz-btn{
+  margin-top:50px;
+  padding:14px 35px;
+  background:linear-gradient(90deg,#2f2f7e,#2563eb);
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  font-size:15px;
+  cursor:pointer;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@media(max-width:900px){
+  .curriculum-layout{ flex-direction:column; }
+  .sidebar{
+    width:100%;
+    border-right:none;
+    border-bottom:3px solid #2f2f7e;
+  }
+  .content-area{ padding:30px 20px; }
+  .content-box{ padding:30px 20px; }
+  .course-title{ font-size:22px; }
+  .course-desc h2{ font-size:18px; }
+  .course-desc p{ font-size:14px; line-height:1.7; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="curriculum-layout">
+
+<aside class="sidebar">
+  <h3>Module 5 Outline</h3>
+
+  <div class="module current">
+    <div class="module-title">AI IN CHEMISTRY</div>
+    <ul>
+      <li><a href="#topic-5-1">5.1 AI in Chemical Research</a></li>
+      <li><a href="#topic-5-2">5.2 Drug Discovery</a></li>
+      <li><a href="#topic-5-3">5.3 Molecular Modeling</a></li>
+      <li><a href="#topic-5-4">5.4 Future of AI in Chemistry</a></li>
+    </ul>
+  </div>
+
+  <div class="module locked" id="module6">
+    <div class="module-title"><a href="module6.html">Module 6</a></div>
+  </div>
+</aside>
+
+<main class="content-area">
+<div class="content-box">
+
+<div class="course-title">AI IN CHEMISTRY</div>
+
+<div class="course-desc">
+
+<h2 id="topic-5-1">5.1 AI in Chemical Research</h2>
+<p>
+<p>
+Artificial Intelligence is transforming chemical research by significantly accelerating the process of experimentation and analysis. Traditionally, chemists spend years conducting repeated laboratory experiments to observe reactions and validate hypotheses. AI reduces this time by analyzing vast experimental datasets within seconds and identifying meaningful patterns that humans might overlook. Machine learning algorithms can predict chemical reaction outcomes, estimate reaction yields, and suggest optimal temperature, pressure, and catalyst conditions. 
+
+AI-powered systems also assist in analyzing spectroscopy data, chromatography results, and molecular fingerprints with higher precision. This reduces laboratory errors and improves research reliability. Robotic laboratories integrated with AI can automate repetitive experiments, collect data continuously, and adjust parameters in real time. Additionally, AI enhances safety by detecting hazardous reaction conditions before accidents occur. Overall, AI improves accuracy, efficiency, safety, and innovation in modern chemical research.
+</p></p>
+
+<h2 id="topic-5-2">5.2 Drug Discovery</h2>
+<p>
+<p>
+AI plays a crucial role in modern drug discovery by shortening the time required to develop new medicines. Traditional drug development may take 10–15 years and cost billions of dollars. AI reduces this cost and time by analyzing biological data, genetic information, and disease patterns to identify potential drug candidates quickly. Machine learning models can predict how a drug molecule will interact with a target protein, helping scientists select the most promising compounds early in the research stage.
+
+AI also helps in predicting drug toxicity, side effects, and interactions before clinical trials begin, which improves patient safety. During pandemics, AI assists in vaccine development by modeling virus structures and identifying effective chemical compounds. Furthermore, AI enables personalized medicine by analyzing patient-specific genetic data to design tailored treatments. By combining chemistry, biology, and computational intelligence, AI is revolutionizing pharmaceutical innovation and improving healthcare outcomes worldwide.
+</p></p>
+
+<h2 id="topic-5-3">5.3 Molecular Modeling</h2>
+<p>
+<p>
+Molecular modeling is one of the most powerful applications of AI in chemistry. AI algorithms simulate molecular structures and predict their physical and chemical properties without the need for physical experiments. This helps scientists understand molecular stability, bonding patterns, reaction pathways, and energy states. Deep learning models can accurately predict protein folding structures, which is essential for understanding diseases and designing targeted drugs.
+
+AI-based simulations allow researchers to test thousands of molecular combinations virtually, saving time and laboratory resources. It also supports catalyst optimization by identifying materials that increase reaction efficiency while reducing waste. In material science and nanotechnology, AI helps design new polymers, batteries, and advanced materials with desired properties. By improving computational chemistry methods, AI enables faster innovation in chemical engineering, environmental chemistry, and sustainable material development.
+</p></p>
+
+<h2 id="topic-5-4">5.4 Future of AI in Chemistry</h2>
+<p>
+<p>
+The future of AI in chemistry is highly promising and transformative. Smart laboratories equipped with AI-driven robotic systems will automate most experimental procedures, allowing researchers to focus more on innovation and analysis. AI will play a major role in green chemistry by designing environmentally friendly processes that minimize waste, energy consumption, and toxic byproducts. This will significantly contribute to climate change mitigation and pollution control.
+
+In the coming years, AI will enhance food safety testing, water purification technologies, and renewable energy research such as hydrogen fuel and solar materials. Large chemical databases integrated with AI will enable real-time knowledge sharing across global research communities. Human-AI collaboration will become stronger, where scientists guide AI systems and AI supports data-driven decision-making. Ultimately, AI will expand the boundaries of chemical science and promote sustainable and responsible innovation.
+</p></p>
+
+<button class="quiz-btn" onclick="goToQuiz()">Take Module 5 Quiz</button>
+
+</div>
+</div>
+</main>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/js/include.js"></script>
+<script>
+loadHTML("header","header.html");
+loadHTML("footer","footer.html");
+
+function goToQuiz(){
+  window.location.href="quiz_module5.html";
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  let highest = parseInt(localStorage.getItem("highestUnlockedModule")) || 1;
+  if(highest >= 6){
+    document.getElementById("module6").classList.remove("locked");
+  }
+});
+</script>
+
+</body>
+</html>

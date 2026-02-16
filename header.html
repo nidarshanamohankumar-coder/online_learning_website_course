@@ -1,0 +1,26 @@
+<?php /* header.php */ ?>
+<header class="main-header">
+  <div class="header-left">
+    <div class="logo-text">
+      Learn with<br>
+      <span>Akshayam 360</span>
+    </div>
+  </div>
+
+  <div class="header-center">
+    <input type="text" placeholder="Search Courses..." />
+  </div>
+
+  <div class="header-right">
+    <a href="index.php">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="about.php">About</a>
+    <button class="login-btn" onclick="goLogin()">Login / Sign Up</button>
+  </div>
+</header>
+
+<script>
+function goLogin(){
+  window.location.href = "login.php";
+}
+</script>

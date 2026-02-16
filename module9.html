@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI For All | Module 9</title>
+
+<link rel="stylesheet" href="assets/css/common.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#eef2f7;
+}
+
+.curriculum-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+.sidebar{
+  width:280px;
+  background:#ffffff;
+  border-right:4px solid #2f2f7e;
+  padding:25px;
+  overflow-y:auto;
+}
+
+.sidebar h3{
+  font-size:18px;
+  margin-bottom:20px;
+  color:#2f2f7e;
+}
+
+.module-title{
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+.module ul{
+  padding-left:0;
+}
+
+.module ul li{
+  list-style:none;
+  margin-bottom:10px;
+}
+
+.module ul li a{
+  text-decoration:none;
+  font-size:14px;
+  color:#374151;
+  padding:6px 10px;
+  display:block;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.module ul li a:hover{
+  background:#2f2f7e;
+  color:white;
+}
+
+.module.locked{
+  opacity:0.4;
+  pointer-events:none;
+  position:relative;
+}
+
+.module.locked::after{
+  content:"🔒 Complete previous quiz";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#2f2f7e;
+  color:#fff;
+  padding:4px 10px;
+  font-size:11px;
+  border-radius:5px;
+}
+
+.content-area{
+  flex:1;
+  padding:60px 70px;
+}
+
+.content-box{
+  background:#fff;
+  padding:50px;
+  max-width:900px;
+  margin:auto;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.course-title{
+  font-size:28px;
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:40px;
+  font-weight:700;
+}
+
+.course-desc h2{
+  margin-top:50px;
+  font-size:20px;
+  color:#2f2f7e;
+}
+
+.course-desc p{
+  margin-top:15px;
+  line-height:1.9;
+  font-size:15px;
+  text-align:justify;
+  color:#444;
+}
+
+.quiz-btn{
+  margin-top:50px;
+  padding:14px 35px;
+  background:linear-gradient(90deg,#2f2f7e,#2563eb);
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  font-size:15px;
+  cursor:pointer;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@media(max-width:900px){
+  .curriculum-layout{ flex-direction:column; }
+  .sidebar{
+    width:100%;
+    border-right:none;
+    border-bottom:3px solid #2f2f7e;
+  }
+  .content-area{ padding:30px 20px; }
+  .content-box{ padding:30px 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="curriculum-layout">
+
+<aside class="sidebar">
+  <h3>Module 9 Outline</h3>
+
+  <div class="module current">
+    <div class="module-title">AI IN EVERY DAY LIFE</div>
+    <ul>
+      <li><a href="#topic-9-1">9.1 AI in Smartphones</a></li>
+      <li><a href="#topic-9-2">9.2 AI in Social Media</a></li>
+      <li><a href="#topic-9-3">9.3 AI in Smart Homes</a></li>
+      <li><a href="#topic-9-4">9.4 AI in Transportation</a></li>
+      <li><a href="#topic-9-5">9.5 AI in Online Services</a></li>
+    </ul>
+  </div>
+
+  <div class="module locked" id="module10">
+    <div class="module-title"><a href="module10.html">Module 10</a></div>
+  </div>
+</aside>
+
+<main class="content-area">
+<div class="content-box">
+
+<div class="course-title">AI IN EVERY DAY LIFE</div>
+
+<div class="course-desc">
+
+<h2 id="topic-9-1">9.1 AI in Smartphones</h2>
+<p>
+Artificial Intelligence is deeply embedded in modern smartphones, making them intelligent personal assistants rather than simple communication devices. AI enhances performance, user experience, and security in multiple ways.
+
+One of the most visible applications is AI-powered camera systems. Smartphones use deep learning models to detect scenes automatically (portrait, night mode, food, landscape). AI adjusts brightness, contrast, color balance, and focus dynamically. Facial recognition algorithms identify faces and apply beautification or focus enhancement techniques.
+
+Voice assistants such as Siri and Google Assistant use Natural Language Processing (NLP) to understand user commands. Speech recognition models convert voice into text, while machine learning systems interpret intent and provide relevant responses.
+
+AI also improves smartphone battery management. By analyzing user behavior, AI predicts app usage patterns and optimizes background processes to extend battery life.
+
+Security systems such as facial authentication and fingerprint scanning use AI-based biometric verification to ensure secure access. These systems continuously improve accuracy by learning from user interaction.
+
+Thus, AI transforms smartphones into intelligent, adaptive devices that learn from users over time.</p>
+
+<h2 id="topic-9-2">9.2 AI in Social Media</h2>
+<p>
+Social media platforms rely heavily on Artificial Intelligence to personalize user experiences and manage massive volumes of data.
+
+AI-based recommendation systems analyze user interactions such as likes, shares, comments, and watch time. Machine learning algorithms create user behavior profiles and display relevant content accordingly. This is known as content personalization.
+
+Natural Language Processing models detect spam, hate speech, and fake news. AI-based sentiment analysis evaluates user opinions from text and emojis. Image recognition systems identify inappropriate content and enforce platform guidelines.
+
+AI also powers targeted advertising systems. By analyzing browsing patterns and interests, platforms deliver personalized advertisements that increase engagement and revenue.
+
+Another important area is facial recognition used for automatic photo tagging. Computer vision models detect faces and match them with user profiles.
+
+However, AI in social media also raises concerns about data privacy and algorithmic bias, highlighting the importance of ethical AI practices.</p>
+
+<h2 id="topic-9-3">9.3 AI in Smart Homes</h2>
+<p>
+Smart home technology integrates AI to automate and simplify daily routines. AI-enabled devices learn user preferences and adjust environmental conditions automatically.
+
+Smart thermostats analyze usage patterns and weather conditions to optimize temperature settings. This reduces energy consumption and lowers electricity bills.
+
+Voice-controlled assistants manage lighting, appliances, music systems, and security cameras. AI-powered surveillance systems detect unusual movements and send alerts instantly.
+
+Smart refrigerators monitor food items and suggest grocery lists. AI-based predictive systems identify energy usage trends and recommend energy-saving strategies.
+
+The integration of AI with Internet of Things (IoT) devices creates intelligent living environments where devices communicate and coordinate seamlessly.</p>
+
+<h2 id="topic-9-4">9.4 AI in Transportation</h2>
+<p>
+Transportation systems use AI to improve safety, efficiency, and traffic management.
+
+Navigation apps analyze real-time traffic data, road conditions, and historical patterns to suggest optimal routes. Machine learning algorithms continuously update route predictions.
+
+Ride-sharing platforms use AI to match drivers and passengers efficiently. Dynamic pricing models adjust fares based on demand and supply.
+
+Autonomous vehicles use computer vision, radar, and LiDAR sensors combined with deep learning algorithms to detect obstacles, recognize traffic signs, and make driving decisions.
+
+AI also improves public transportation systems by optimizing schedules and predicting passenger flow. Predictive maintenance systems monitor vehicle health to prevent breakdowns.
+
+These intelligent transportation systems reduce congestion, improve fuel efficiency, and enhance road safety</p>
+
+<h2 id="topic-9-5">9.5 AI in Online Services</h2>
+<p>
+E-commerce platforms use AI-driven recommendation engines to suggest products based on browsing history, past purchases, and user preferences.
+
+Collaborative filtering algorithms compare user behavior patterns to recommend relevant items. This increases customer satisfaction and sales conversion rates.
+
+Streaming platforms use AI to analyze viewing history and suggest movies, series, or songs tailored to individual preferences. AI models predict what users are likely to watch next.
+
+Chatbots provide instant customer support using NLP-based conversation systems. These bots handle queries, track orders, and resolve complaints without human intervention.
+
+Fraud detection systems use AI to monitor unusual transaction behavior and prevent financial fraud</p>
+
+<button class="quiz-btn" onclick="goToQuiz()">Take Module 9 Quiz</button>
+
+</div>
+</div>
+</main>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/js/include.js"></script>
+<script>
+loadHTML("header","header.html");
+loadHTML("footer","footer.html");
+
+function goToQuiz(){
+  window.location.href="quiz_module9.html";
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  let highest = parseInt(localStorage.getItem("highestUnlockedModule")) || 1;
+  if(highest >= 10){
+    document.getElementById("module10").classList.remove("locked");
+  }
+});
+</script>
+
+</body>
+</html>

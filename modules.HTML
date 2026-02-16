@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI For All | Module 1</title>
+
+  <link rel="stylesheet" href="assets/css/common.css">
+
+  <style>
+    body {
+      background: #f6f7fb;
+      font-family: Arial, sans-serif;
+    }
+
+    .module-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .course-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #2f2f7e;
+    }
+
+    .module-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .module-content p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .module-image {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .module-image img {
+      width: 70%;
+      border-radius: 6px;
+    }
+
+    .complete-btn {
+      display: block;
+      margin: 30px auto;
+      padding: 10px 25px;
+      font-size: 15px;
+      border: none;
+      border-radius: 25px;
+      background: #2f2f7e;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .quiz-box {
+      display: none;
+      margin-top: 30px;
+      padding: 25px;
+      border-radius: 6px;
+      background: #f9fafc;
+      border: 1px solid #ddd;
+    }
+
+    .quiz-box h3 {
+      margin-bottom: 15px;
+      color: #111;
+    }
+
+    .quiz-option {
+      margin-bottom: 10px;
+    }
+
+    .submit-btn {
+      margin-top: 15px;
+      padding: 8px 20px;
+      background: #16a34a;
+      border: none;
+      color: #fff;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<div class="module-container">
+
+  <div class="course-title">AI FOR ALL</div>
+  <div class="module-title">Module 1: Introduction</div>
+
+  <div class="module-content">
+    <p>
+      <strong>"AI For All"</strong> is a widespread concept and movement focused on democratizing artificial intelligence,
+      aiming to make its benefits, tools, and understanding accessible to every individual and community,
+      regardless of technical background, income, or location.
+    </p>
+
+    <p>
+      The core idea emphasizes broad inclusivity, ensuring that AI technologies are not limited to a select few
+      or specific industries. This movement advocates for:
+    </p>
+
+    <p>
+      <strong>Accessibility:</strong> Making AI tools and platforms easy to use and available to a general audience.
+    </p>
+
+    <p>
+      <strong>Education:</strong> Providing resources and training to help people understand how AI works and how it can
+      be used ethically and effectively.
+    </p>
+
+    <p>
+      <strong>Equity:</strong> Striving to ensure that the development and deployment of AI do not reinforce existing
+      biases or create new inequalities.
+    </p>
+
+    <p>
+      Ultimately, <strong>"AI For All"</strong> seeks to empower a diverse population to participate in and benefit from
+      the ongoing AI revolution.
+    </p>
+  </div>
+
+  <div class="module-image">
+    <img src="https://via.placeholder.com/600x300?text=AI+For+All" alt="AI For All">
+  </div>
+
+  <!-- Complete module -->
+  <button class="complete-btn" onclick="showQuiz()">
+    Complete Module
+  </button>
+
+  <!-- Quiz Section -->
+  <div class="quiz-box" id="quizBox">
+    <h3>Module 1 Quiz</h3>
+
+    <p><strong>1. What is the main goal of “AI For All”?</strong></p>
+
+    <div class="quiz-option">
+      <input type="radio" name="q1" value="a"> To restrict AI to experts only
+    </div>
+
+    <div class="quiz-option">
+      <input type="radio" name="q1" value="b"> To make AI accessible and inclusive for everyone
+    </div>
+
+    <div class="quiz-option">
+      <input type="radio" name="q1" value="c"> To eliminate human involvement in AI
+    </div>
+
+    <button class="submit-btn" onclick="submitQuiz()">
+      Submit Quiz
+    </button>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- JS -->
+<script src="assets/js/include.js"></script>
+
+<script>
+  loadHTML("header", "header.html");
+  loadHTML("footer", "footer.html");
+
+  function showQuiz() {
+    document.getElementById("quizBox").style.display = "block";
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+
+  function submitQuiz() {
+    const answer = document.querySelector('input[name="q1"]:checked');
+
+    if (!answer) {
+      alert("Please select an answer");
+      return;
+    }
+
+    if (answer.value === "b") {
+      alert("Quiz Passed! You can move to the next module.");
+      // later:
+      // window.location.href = "module2.html";
+    } else {
+      alert("Wrong answer. Please try again.");
+    }
+  }
+</script>
+
+</body>
+</html>

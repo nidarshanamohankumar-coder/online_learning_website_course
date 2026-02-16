@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI For All | Module 6</title>
+
+<link rel="stylesheet" href="assets/css/common.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#eef2f7;
+}
+
+.curriculum-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+.sidebar{
+  width:280px;
+  background:#ffffff;
+  border-right:4px solid #2f2f7e;
+  padding:25px;
+  overflow-y:auto;
+}
+
+.sidebar h3{
+  font-size:18px;
+  margin-bottom:20px;
+  color:#2f2f7e;
+}
+
+.module-title{
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+.module ul{
+  padding-left:0;
+}
+
+.module ul li{
+  list-style:none;
+  margin-bottom:10px;
+}
+
+.module ul li a{
+  text-decoration:none;
+  font-size:14px;
+  color:#374151;
+  padding:6px 10px;
+  display:block;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.module ul li a:hover{
+  background:#2f2f7e;
+  color:white;
+}
+
+.module.current .module-title{
+  padding:6px;
+  border-radius:6px;
+}
+
+.module.locked{
+  opacity:0.4;
+  pointer-events:none;
+  position:relative;
+}
+
+.module.locked::after{
+  content:"🔒 Complete previous quiz";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#2f2f7e;
+  color:#fff;
+  padding:4px 10px;
+  font-size:11px;
+  border-radius:5px;
+}
+
+.content-area{
+  flex:1;
+  padding:60px 70px;
+}
+
+.content-box{
+  background:#fff;
+  padding:50px;
+  max-width:900px;
+  margin:auto;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.course-title{
+  font-size:28px;
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:40px;
+  font-weight:700;
+}
+
+.course-desc h2{
+  margin-top:50px;
+  font-size:20px;
+  color:#2f2f7e;
+}
+
+.course-desc p{
+  margin-top:15px;
+  line-height:1.9;
+  font-size:15px;
+  text-align:justify;
+  color:#444;
+}
+
+.quiz-btn{
+  margin-top:50px;
+  padding:14px 35px;
+  background:linear-gradient(90deg,#2f2f7e,#2563eb);
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  font-size:15px;
+  cursor:pointer;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@media(max-width:900px){
+  .curriculum-layout{ flex-direction:column; }
+  .sidebar{
+    width:100%;
+    border-right:none;
+    border-bottom:3px solid #2f2f7e;
+  }
+  .content-area{ padding:30px 20px; }
+  .content-box{ padding:30px 20px; }
+  .course-title{ font-size:22px; }
+  .course-desc h2{ font-size:18px; }
+  .course-desc p{ font-size:14px; line-height:1.7; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="curriculum-layout">
+
+<aside class="sidebar">
+  <h3>Module 6 Outline</h3>
+
+  <div class="module current">
+    <div class="module-title">AI IN MANAGEMENT</div>
+    <ul>
+      <li><a href="#topic-6-1">6.1 AI in Business Strategy</a></li>
+      <li><a href="#topic-6-2">6.2 AI in HR Management</a></li>
+      <li><a href="#topic-6-3">6.3 AI in Marketing</a></li>
+      <li><a href="#topic-6-4">6.4 AI in Decision Making</a></li>
+    </ul>
+  </div>
+
+  <div class="module locked" id="module7">
+    <div class="module-title"><a href="module7.html">Module 7</a></div>
+  </div>
+</aside>
+
+<main class="content-area">
+<div class="content-box">
+
+<div class="course-title">AI IN MANAGEMENT</div>
+
+<div class="course-desc">
+
+<h2 id="topic-6-1">6.1 AI in Business Strategy</h2>
+<p>
+<p>
+Artificial Intelligence plays a vital role in developing modern business strategies by transforming raw data into meaningful insights. Organizations today generate massive amounts of data from customers, markets, and internal operations. AI analyzes this data to identify trends, patterns, and growth opportunities that help businesses stay competitive. Machine learning models predict customer behavior, demand fluctuations, and market shifts, allowing companies to make proactive strategic decisions rather than reactive ones.
+
+AI also enhances competitive analysis by studying competitor performance, pricing strategies, and industry movements. It supports risk management by identifying potential financial, operational, or market risks before they become serious problems. Advanced forecasting models powered by AI improve revenue predictions and supply chain planning. By automating repetitive tasks and improving productivity, AI strengthens business intelligence systems and helps organizations achieve long-term sustainability and operational efficiency.
+</p></p>
+
+<h2 id="topic-6-2">6.2 AI in HR Management</h2>
+<p>
+<p>
+AI is transforming Human Resource Management by automating routine processes and improving workforce efficiency. During recruitment, AI-powered systems screen thousands of resumes within minutes, shortlisting the most suitable candidates based on skills, experience, and job requirements. This reduces hiring time and minimizes human bias in selection. AI tools can also conduct preliminary interviews using chatbots and video analysis to evaluate communication skills and confidence levels.
+
+In addition, AI predicts employee performance and turnover risks by analyzing historical HR data. It supports workforce planning by identifying skill gaps and recommending targeted training programs. AI-driven analytics measure employee engagement through surveys and feedback analysis. Payroll automation, attendance tracking, and performance monitoring systems also become more accurate with AI integration. Overall, AI enhances HR analytics, supports remote workforce management, and contributes to a more productive and satisfied workforce.
+</p></p>
+
+<h2 id="topic-6-3">6.3 AI in Marketing</h2>
+<p>
+<p>
+AI has revolutionized marketing by enabling highly personalized and data-driven campaigns. Modern consumers expect customized experiences, and AI helps businesses deliver relevant product recommendations based on browsing history, purchase behavior, and preferences. Recommendation engines used by e-commerce platforms increase sales conversion and customer satisfaction. AI also improves digital advertising by targeting the right audience at the right time using predictive analytics.
+
+Through social media analytics, AI examines user interactions, sentiment analysis, and trending topics to shape effective marketing strategies. Email marketing campaigns become smarter with AI-driven automation that adjusts content and timing for maximum engagement. AI tools measure campaign performance in real time and optimize budgets accordingly. By strengthening brand management and customer relationship strategies, AI helps businesses build long-term loyalty and competitive advantage.
+</p></p>
+
+<h2 id="topic-6-4">6.4 AI in Decision Making</h2>
+<p>
+AI enhances decision-making processes by enabling organizations to rely on accurate, real-time data analysis instead of intuition alone. Traditional decision-making methods often involve delays and incomplete information. AI systems analyze large datasets within seconds and provide actionable insights through dashboards and predictive models. This supports faster and more confident strategic decisions across finance, operations, marketing, and human resources.
+
+AI reduces human bias by evaluating data objectively and identifying patterns that might otherwise go unnoticed. It improves financial planning by forecasting revenue, expenses, and investment risks. AI-powered systems can simulate multiple scenarios, helping managers choose the most effective strategy. Automated reporting systems provide continuous updates, allowing businesses to adapt quickly to changing market conditions. Ultimately, human-AI collaboration leads to smarter, evidence-based management decisions and improved organizational performance.
+</p>
+<button class="quiz-btn" onclick="goToQuiz()">Take Module 6 Quiz</button>
+
+</div>
+</div>
+</main>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/js/include.js"></script>
+<script>
+loadHTML("header","header.html");
+loadHTML("footer","footer.html");
+
+function goToQuiz(){
+  window.location.href="quiz_module6.html";
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  let highest = parseInt(localStorage.getItem("highestUnlockedModule")) || 1;
+  if(highest >= 7){
+    document.getElementById("module7").classList.remove("locked");
+  }
+});
+</script>
+
+</body>
+</html>

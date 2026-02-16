@@ -1,0 +1,405 @@
+body{
+       font-family: "Poppins", sans-serif;
+
+}
+.hero-slider {
+  position: relative;
+  width: 100%;
+  max-height: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+.slide{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+.slide-active{
+  opacity: 1;
+}
+.hero-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  text-align: center;
+  padding: 30px 40px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+}
+.hero-content p
+  {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
+}
+.texts{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.texts h1{
+  color: black;
+  max-width: 75%;
+}
+.gradient{
+  background:  linear-gradient(90deg, #363aa3, #3d57b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.typing{
+  overflow: hidden;
+  animation: typing 8s steps(60, end) forwards;
+}
+@keyframes typing{
+  from{ width:0 }
+  to{ width: 100%; }
+}
+.arr img{
+  width: 200px;
+  height: 200px;
+  animation: arrowMove 1.5s ease-in-out infinite alternate; 
+}
+@keyframes arrowMove{
+  from {transform: translateX(0);}
+  to { transform: translateX(15px);}
+}
+.batch img{
+  width: 300px;
+  height: 300px;
+  margin-right: 20%;
+  animation: badgePop 2s ease forwards;
+}
+@keyframes badgePop {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.training{
+  margin-left: 12.5%;
+  color: black;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.training h2{
+  margin: 0;
+  font-size: 35px;
+  color: black;
+}
+.icon-circle {
+  width: 90px;
+  height: 90px;
+  background: #f5f1c6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+.internship-section {
+  padding: 90px 12%;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f8f9ff, #eef2ff);
+}
+
+/* Title */
+.section-title {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Description */
+.section-desc {
+  max-width: 650px;
+  margin-bottom: 60px;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.7;
+}
+
+/* Row layout like Wix */
+/* Row layout */
+
+
+.internship-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  opacity: 0;
+  transition: all 3s ease;
+}
+.internship-row.left{
+  margin-left: 16%;
+}
+
+/* direction start positions */
+.internship-row.from-left {
+  transform: translateX(-120px);
+}
+
+.internship-row.from-right {
+  transform: translateX(120px);
+}
+
+/* when visible */
+.internship-row.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* LEFT SIDE (image + title) */
+.row-left {
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  background-color: lightgrey;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-left: 15%;
+}
+
+.row-left img {
+  width: 200px;
+  height:200px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-top: 75px;
+}
+
+.row-left h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2f3142;
+}
+
+/* RIGHT SIDE paragraph */
+.row-content {
+  margin-left: 40px;
+  font-size: 17px;
+  color: #444;
+  line-height: 1.8;
+  max-width: 700px;
+  opacity: 1;
+  text-align: justify;
+}
+
+/* Certificate text */
+.certificate {
+  margin-top: 50px;
+  font-weight: 600;
+  color: #2d3fbf;
+  font-size: 16px;
+}
+.margin{
+  margin: 20px;
+}
+@media(max-width: 1024px){
+  #header{
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px
+  }
+  h1{
+    padding-left: 0;
+    text-align: center;
+    font-size: 25px;
+  }
+  .searchbar input{
+    width: 225px;
+    height: 50px;
+  }
+  .menu{
+    gap: 25px;
+    font-size: 22px;
+  }
+  .logsign {
+    width: 170px;
+    height: 55px;
+    font-size: 18px;
+  }
+
+  /* Hero */
+  .hero-slider {
+    height: 450px;
+  }
+
+  .hero-content {
+    width: 300px;
+    padding: 20px;
+  }
+
+  .hero-content p {
+    font-size: 26px;
+  }
+
+  /* Text section */
+  .texts {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .texts h1 {
+    max-width: 100%;
+    font-size: 26px;
+  }
+
+  .arr img,
+  .batch img {
+    width: 180px;
+    height: auto;
+    margin-right: 0;
+  }
+
+  /* Internship rows */
+  .internship-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .internship-row.left {
+    margin-left: 0;
+  }
+
+  .row-left {
+    margin-left: 0;
+  }
+
+  .row-content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .training {
+    margin-left: 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+
+
+  /* Hero */
+  .hero-slider {
+    height: 350px;
+  }
+
+  .hero-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .hero-content p {
+    font-size: 20px;
+  }
+
+  /* Gradient text */
+  .texts h1 {
+      padding-left: 0;
+      text-align: center;
+
+      line-height: 1.4;
+  }
+  
+  .arr img {
+    width: 120px;
+  }
+
+  .batch img {
+    width: 160px;
+  }
+
+  /* Section spacing */
+  .internship-section {
+    padding: 60px 6%;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-desc {
+    font-size: 15px;
+  }
+
+  /* Cards */
+  .row-left {
+    width: 90%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .row-left img {
+    width: 140px;
+    height: 140px;
+    margin-top: 30px;
+  }
+
+  .row-content {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  /* Training title */
+  .training h2 {
+    font-size: 22px;
+  }
+
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon-circle img {
+    width: 40px;
+    height: 40px;
+  }
+  .typing{
+    white-space: normal;
+    overflow: visible;
+    animation: none;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+

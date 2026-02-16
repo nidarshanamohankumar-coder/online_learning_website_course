@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 8 Quiz | AI For All</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#f4f6f8;
+  margin:0;
+  padding:40px;
+}
+
+.quiz-box{
+  max-width:700px;
+  background:#ffffff;
+  padding:35px;
+  margin:auto;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+h2{
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:25px;
+}
+
+.question{
+  margin-bottom:20px;
+}
+
+.question p{
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+label{
+  display:block;
+  margin:6px 0;
+}
+
+.submit-btn{
+  margin-top:30px;
+  padding:12px 28px;
+  background:#16a34a;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+  display:block;
+  margin:auto;
+}
+
+.submit-btn:hover{
+  background:#15803d;
+}
+</style>
+</head>
+
+<body>
+
+<div class="quiz-box">
+  <h2>Module 8 Quiz – Ethical AI</h2>
+
+  <div class="question">
+    <p>1. Ethical AI mainly focuses on?</p>
+    <label><input type="radio" name="q1"> Fairness and transparency</label>
+    <label><input type="radio" name="q1"> Faster hardware</label>
+    <label><input type="radio" name="q1"> Graphics performance</label>
+  </div>
+
+  <div class="question">
+    <p>2. Bias in AI comes from?</p>
+    <label><input type="radio" name="q2"> Training data</label>
+    <label><input type="radio" name="q2"> Screen size</label>
+    <label><input type="radio" name="q2"> Network cables</label>
+  </div>
+
+  <div class="question">
+    <p>3. Responsible AI ensures?</p>
+    <label><input type="radio" name="q3"> Accountability</label>
+    <label><input type="radio" name="q3"> Higher electricity</label>
+    <label><input type="radio" name="q3"> More memory</label>
+  </div>
+
+  <div class="question">
+    <p>4. Privacy in AI protects?</p>
+    <label><input type="radio" name="q4"> User data</label>
+    <label><input type="radio" name="q4"> Algorithms only</label>
+    <label><input type="radio" name="q4"> Software licenses</label>
+  </div>
+
+  <div class="question">
+    <p>5. Ethical AI is important because?</p>
+    <label><input type="radio" name="q5"> AI affects society</label>
+    <label><input type="radio" name="q5"> AI needs batteries</label>
+    <label><input type="radio" name="q5"> AI replaces monitors</label>
+  </div>
+
+  <button class="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+</div>
+
+<script>
+function submitQuiz(){
+  localStorage.setItem("highestUnlockedModule","9");
+  alert("Module 8 Quiz completed successfully!\nModule 9 is now unlocked.");
+  window.location.href="module8.html";
+}
+</script>
+
+</body>
+</html>

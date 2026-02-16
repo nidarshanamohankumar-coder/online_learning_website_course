@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI For All | Module 2</title>
+
+<link rel="stylesheet" href="assets/css/common.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#eef2f7;
+}
+
+/* ===== LAYOUT ===== */
+.curriculum-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  width:300px;
+  background:#ffffff;
+  border-right:4px solid #2f2f7e;
+  padding:30px 25px;
+  overflow-y:auto;
+}
+
+.sidebar h3{
+  font-size:18px;
+  margin-bottom:25px;
+  color:#2f2f7e;
+  font-weight:600;
+}
+
+.module-title{
+  font-weight:600;
+  font-size:15px;
+  margin-bottom:15px;
+}
+
+.module ul{
+  padding-left:0;
+}
+
+.module ul li{
+  list-style:none;
+  margin-bottom:12px;
+}
+
+.module ul li a{
+  text-decoration:none;
+  font-size:14px;
+  color:#374151;
+  padding:8px 12px;
+  display:block;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.module ul li a:hover{
+  background:#2f2f7e;
+  color:white;
+  padding-left:18px;
+}
+
+.module.current .module-title{
+  padding:8px;
+  border-radius:6px;
+}
+
+/* LOCKED */
+.module.locked{
+  opacity:0.4;
+  pointer-events:none;
+  position:relative;
+}
+
+.module.locked::after{
+  content:"🔒 Complete previous quiz";
+  position:absolute;
+  top:45%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#2f2f7e;
+  color:#fff;
+  padding:6px 12px;
+  font-size:12px;
+  border-radius:6px;
+}
+
+/* ===== CONTENT ===== */
+.content-area{
+  flex:1;
+  padding:70px 80px;
+}
+
+.content-box{
+  background:#fff;
+  padding:60px;
+  max-width:950px;
+  margin:auto;
+  border-radius:18px;
+  box-shadow:0 25px 50px rgba(0,0,0,0.08);
+}
+
+.course-title{
+  font-size:30px;
+  font-weight:700;
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:50px;
+}
+
+.course-title::after{
+  content:"";
+  width:70px;
+  height:4px;
+  background:#facc15;
+  display:block;
+  margin:12px auto 0;
+  border-radius:10px;
+}
+
+/* TEXT ALIGNMENT */
+.course-desc h2{
+  margin-top:70px;
+  font-size:22px;
+  color:#2f2f7e;
+}
+
+.course-desc p{
+  margin-top:20px;
+  line-height:2;
+  font-size:15.5px;
+  color:#444;
+  text-align:justify;
+  letter-spacing:0.3px;
+}
+
+/* QUIZ BUTTON */
+.quiz-btn{
+  margin-top:70px;
+  padding:15px 40px;
+  background:linear-gradient(90deg,#2f2f7e,#2563eb);
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
+
+.quiz-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+/* ===== MOBILE RESPONSIVE (Improved like Module 6) ===== */
+@media(max-width:900px){
+
+  .curriculum-layout{
+    flex-direction:column;
+  }
+
+  /* Sidebar full width */
+  .sidebar{
+    width:100%;
+    border-right:none;
+    border-bottom:3px solid #2f2f7e;
+    padding:20px;
+  }
+
+  .sidebar h3{
+    font-size:16px;
+    margin-bottom:15px;
+  }
+
+  .module-title{
+    font-size:14px;
+  }
+
+  .module ul li a{
+    font-size:13px;
+    padding:6px 8px;
+  }
+
+  /* Content spacing reduced */
+  .content-area{
+    padding:25px 15px;
+  }
+
+  .content-box{
+    padding:25px 18px;
+    border-radius:12px;
+  }
+
+  .course-title{
+    font-size:21px;
+    margin-bottom:30px;
+  }
+
+  .course-title::after{
+    width:50px;
+    height:3px;
+  }
+
+  .course-desc h2{
+    font-size:17px;
+    margin-top:40px;
+  }
+
+  .course-desc p{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .quiz-btn{
+    width:100%;
+    padding:13px;
+    font-size:14px;
+    margin-top:40px;
+  }
+}</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="curriculum-layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <h3>Course Outline</h3>
+
+  <div class="module">
+    <div class="module-title">
+      <a href="course_curriculum.html">Module 1</a>
+    </div>
+  </div>
+
+  <div class="module current">
+    <div class="module-title">Module 2: AI in Tamil</div>
+    <ul>
+      <li><a href="#topic-2-1">2.1 AI – அறிமுகம்</a></li>
+      <li><a href="#topic-2-2">2.2 Types of AI</a></li>
+      <li><a href="#topic-2-3">2.3 Core Components</a></li>
+      <li><a href="#topic-2-4">2.4 AI vs Human Intelligence</a></li>
+    </ul>
+  </div>
+
+  <div class="module locked" id="module3">
+    <div class="module-title"><a href="module3.html">Module 3</a></div>
+  </div>
+
+</aside>
+
+<!-- CONTENT -->
+<main class="content-area">
+<div class="content-box">
+
+<div class="course-title">
+Module 2: தமிழில் செயற்கை நுண்ணறிவு
+</div>
+
+<div class="course-desc">
+
+<h2 id="topic-2-1">2.1 AI – அறிமுகம்</h2>
+<p>
+செயற்கை நுண்ணறிவு என்பது மனித அறிவாற்றலைப் போன்ற செயல்பாடுகளை இயந்திரங்கள் செய்யும் திறன் ஆகும்.
+தமிழ் இலக்கியத்தில் கூட AI பயன்பாடு அதிகரித்து வருகிறது.
+பழமையான ஓலைச்சுவடிகளை டிஜிட்டல் வடிவில் மாற்ற AI உதவுகிறது.
+OCR தொழில்நுட்பம் எழுத்துக்களை அடையாளம் காண உதவுகிறது.
+AI மூலம் மொழிபெயர்ப்பு எளிதாகிறது.
+தமிழ் உரைகளை பகுப்பாய்வு செய்ய முடிகிறது.
+AI மூலம் உரை உருவாக்க இயலும்.
+குரல் அடையாளம் காணும் தொழில்நுட்பம் வளர்கிறது.
+தமிழ் கற்றலை AI எளிதாக்குகிறது.
+AI தரவு பகுப்பாய்வில் உதவுகிறது.
+இலக்கிய ஆய்வில் AI பயன்படுகிறது.
+AI புதிய படைப்புகளை உருவாக்க உதவுகிறது.
+மொழி புரிதல் திறன் மேம்படுகிறது.
+தமிழ் ஆராய்ச்சியில் AI ஆதரவு உள்ளது.
+பழைய நூல்களை பாதுகாக்க AI உதவுகிறது.
+தமிழ் கல்வி டிஜிட்டல் முறையில் வளர்கிறது.
+AI மொழி வளர்ச்சிக்கு பங்காற்றுகிறது.
+புதிய கற்றல் முறைகள் உருவாகின்றன.
+AI தமிழ் உள்ளடக்கத்தை உலகளவில் பரப்புகிறது.
+தமிழில் AI பயன்பாடு நாளுக்கு நாள் அதிகரிக்கிறது.
+</p>
+
+<h2 id="topic-2-2">2.2 Types of AI</h2>
+<p>
+AI Narrow AI மற்றும் General AI ஆக பிரிக்கப்படுகிறது.
+Narrow AI குறிப்பிட்ட பணிகளை மட்டுமே செய்கிறது.
+உதாரணமாக, மொழிபெயர்ப்பு பயன்பாடுகள்.
+General AI மனிதனைப் போன்ற அறிவாற்றல் கொண்டதாக இருக்கும்.
+இது இன்னும் முழுமையாக உருவாகவில்லை.
+Reactive machines ஒரு வகை AI.
+Limited memory AI மற்றொரு வகை.
+Theory of Mind AI எதிர்கால ஆராய்ச்சி.
+Self-aware AI இன்னும் ஆராய்ச்சியில் உள்ளது.
+Narrow AI இன்று பரவலாக பயன்படுகிறது.
+Chatbots Narrow AI ஆகும்.
+Recommendation systems Narrow AI ஆகும்.
+Voice assistants Narrow AI ஆகும்.
+General AI மனிதனைப் போல சிந்திக்கும்.
+இது பல துறைகளில் பயன்படும்.
+AI வகைகள் பயன்பாட்டை தீர்மானிக்கின்றன.
+Narrow AI விரைவான செயல்திறன் தருகிறது.
+General AI சிக்கலான பிரச்சினைகளை தீர்க்கும்.
+AI வளர்ச்சி தொடர்கிறது.
+எதிர்காலத்தில் General AI உருவாகலாம்.
+</p>
+
+<h2 id="topic-2-3">2.3 Core Components of AI</h2>
+<p>
+AI இன் முக்கிய கூறுகள் தரவு, அல்காரிதம் மற்றும் கணினி சக்தி.
+தரவு AI க்கு அடிப்படை.
+அல்காரிதம் முடிவெடுக்க உதவுகிறது.
+Machine learning முக்கிய கூறாகும்.
+Deep learning மேம்பட்ட பகுதி.
+Neural networks மனித மூளை மாதிரி.
+Big data AI வளர்ச்சிக்கு உதவுகிறது.
+Cloud computing AI பயன்பாட்டை அதிகரிக்கிறது.
+Programming மொழிகள் முக்கியம்.
+Python AI இல் பரவலாக பயன்படுகிறது.
+Data preprocessing அவசியம்.
+Model training முக்கிய கட்டம்.
+Testing மற்றும் validation அவசியம்.
+AI அமைப்புகள் துல்லியம் தேவை.
+Hardware ஆதரவு முக்கியம்.
+GPU AI க்கு பயன்படுகிறது.
+AI மாதிரிகள் தொடர்ந்து மேம்படும்.
+Data quality முக்கிய பங்கு வகிக்கிறது.
+Automation AI வளர்ச்சியை அதிகரிக்கிறது.
+Core components இல்லாமல் AI இயங்காது.
+</p>
+
+<h2 id="topic-2-4">2.4 AI vs Human Intelligence</h2>
+<p>
+AI வேகமாக கணக்கிடும் திறன் கொண்டது.
+மனிதன் சிந்தனை ஆழமானது.
+AI உணர்ச்சி இல்லாமல் செயல்படும்.
+மனிதன் உணர்ச்சி கொண்டவன்.
+AI தரவை அடிப்படையாகக் கொண்டு முடிவெடுக்கிறது.
+மனிதன் அனுபவத்தை பயன்படுத்துகிறான்.
+AI சோர்வின்றி வேலை செய்கிறது.
+மனிதன் ஓய்வு தேவைப்படும்.
+AI பிழைகளை குறைக்க உதவும்.
+மனிதன் படைப்பாற்றல் அதிகம்.
+AI பெரிய தரவை பகுப்பாய்வு செய்யும்.
+மனிதன் நெறிமுறை முடிவெடுப்பான்.
+AI மனிதனை மாற்ற அல்ல.
+AI மனிதனை உதவ வருகிறது.
+Human-AI collaboration முக்கியம்.
+AI வேகத்தை அதிகரிக்கிறது.
+மனிதன் தீர்மான திறன் கொண்டவன்.
+AI ஆதரவு கருவி.
+இரண்டும் இணைந்து வேலை செய்ய வேண்டும்.
+AI மற்றும் மனித அறிவு சேர்ந்து வளர்ச்சி தரும்.
+</p>
+
+<button class="quiz-btn" onclick="goToQuiz()">Take Module 2 Quiz</button>
+
+</div>
+</div>
+</main>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/js/include.js"></script>
+<script>
+loadHTML("header","header.html");
+loadHTML("footer","footer.html");
+
+function goToQuiz(){
+  window.location.href="quiz_module2.html";
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  let highest = parseInt(localStorage.getItem("highestUnlockedModule")) || 1;
+
+  if(highest >= 3){
+    document.getElementById("module3").classList.remove("locked");
+  }
+});
+</script>
+
+</body>
+</html>

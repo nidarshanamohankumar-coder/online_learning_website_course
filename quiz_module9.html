@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 9 Quiz | AI For All</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  font-family:'Poppins',sans-serif;
+  background:#eef2f7;
+  margin:0;
+  padding:40px 20px;
+}
+
+.quiz-box{
+  max-width:750px;
+  background:#ffffff;
+  padding:40px;
+  margin:auto;
+  border-radius:12px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+h2{
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:30px;
+}
+
+.question{
+  margin-bottom:25px;
+}
+
+label{
+  display:block;
+  margin-bottom:8px;
+  cursor:pointer;
+}
+
+.submit-btn{
+  margin-top:30px;
+  padding:14px 35px;
+  background:linear-gradient(90deg,#2f2f7e,#2563eb);
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@media(max-width:600px){
+  .quiz-box{ padding:25px; }
+  .submit-btn{ width:100%; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="quiz-box">
+<h2>Module 9 Quiz – AI in Every Day Life</h2>
+
+<form>
+
+<div class="question">
+<p>1. AI in smartphones improves?</p>
+<label><input type="radio" name="q1" value="1"> Camera enhancement</label>
+<label><input type="radio" name="q1" value="0"> Manual dialing only</label>
+<label><input type="radio" name="q1" value="0"> Battery removal</label>
+<label><input type="radio" name="q1" value="0"> Screen brightness only</label>
+</div>
+
+<div class="question">
+<p>2. Social media AI mainly provides?</p>
+<label><input type="radio" name="q2" value="1"> Personalized feed</label>
+<label><input type="radio" name="q2" value="0"> Random posts only</label>
+<label><input type="radio" name="q2" value="0"> No filtering</label>
+<label><input type="radio" name="q2" value="0"> Manual suggestions</label>
+</div>
+
+<div class="question">
+<p>3. Smart home AI controls?</p>
+<label><input type="radio" name="q3" value="1"> Lighting & temperature</label>
+<label><input type="radio" name="q3" value="0"> Paper files</label>
+<label><input type="radio" name="q3" value="0"> Manual locks only</label>
+<label><input type="radio" name="q3" value="0"> Furniture</label>
+</div>
+
+<div class="question">
+<p>4. AI in transportation helps with?</p>
+<label><input type="radio" name="q4" value="1"> Route optimization</label>
+<label><input type="radio" name="q4" value="0"> Traffic ignoring</label>
+<label><input type="radio" name="q4" value="0"> Manual maps only</label>
+<label><input type="radio" name="q4" value="0"> No navigation</label>
+</div>
+
+<div class="question">
+<p>5. AI chatbots improve?</p>
+<label><input type="radio" name="q5" value="1"> Customer support</label>
+<label><input type="radio" name="q5" value="0"> Service delays</label>
+<label><input type="radio" name="q5" value="0"> Manual complaints</label>
+<label><input type="radio" name="q5" value="0"> Offline services</label>
+</div>
+
+<button type="button" class="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+
+</form>
+</div>
+
+<script>
+function submitQuiz(){
+  let score=0;
+
+  for(let i=1;i<=5;i++){
+    let selected=document.querySelector('input[name="q'+i+'"]:checked');
+    if(!selected){
+      alert("Please answer all questions.");
+      return;
+    }
+    score+=parseInt(selected.value);
+  }
+
+  if(score>=3){
+    let current=parseInt(localStorage.getItem("highestUnlockedModule"))||1;
+    if(current<10){
+      localStorage.setItem("highestUnlockedModule",10);
+    }
+    alert("Congratulations! Module 10 is now unlocked!");
+    window.location.href="module9.html";
+  }else{
+    alert("You failed. Try again.");
+  }
+}
+</script>
+
+</body>
+</html>

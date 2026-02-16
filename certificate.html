@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>E-Certificate | AI For All</title>
+
+<style>
+body{
+  font-family: Arial;
+  background:#f4f6f8;
+  padding:40px;
+}
+
+.certificate{
+  max-width:900px;
+  margin:auto;
+  background:#ffffff;
+  padding:40px;
+  text-align:center;
+  border:6px solid #2f2f7e;
+}
+
+button{
+  margin-top:20px;
+  padding:12px 20px;
+  background:#2f2f7e;
+  color:#fff;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="certificate" id="cert">
+  <h1>P.K.R. ARTS COLLEGE FOR WOMEN</H1>
+  <h1> AKSHAYAM360 <h1>
+  <h1>Certificate of Completion</h1>
+  <p>This is to certify that</p>
+  <h2>Student Name</h2>
+  <p>has successfully completed</p>
+  <h3>AI For All Course</h3>
+  <p>Final Score: <strong><span id="score"></span>/10</strong></p>
+
+  <button onclick="window.print()">Download Certificate</button>
+</div>
+
+<script>
+if(localStorage.getItem("quizPassed") !== "true"){
+  document.body.innerHTML = "<h2>❌ Complete the quiz to access the certificate</h2>";
+}
+
+document.getElementById("score").innerText =
+  localStorage.getItem("quizScore");
+</script>
+
+</body>
+</html>

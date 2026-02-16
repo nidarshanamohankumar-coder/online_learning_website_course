@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI For All | Module 3</title>
+
+<link rel="stylesheet" href="assets/css/common.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#eef2f7;
+}
+
+/* ===== LAYOUT ===== */
+.curriculum-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  width:280px;
+  background:#ffffff;
+  border-right:4px solid #2f2f7e;
+  padding:25px;
+  overflow-y:auto;
+}
+
+.sidebar h3{
+  font-size:18px;
+  margin-bottom:20px;
+  color:#2f2f7e;
+}
+
+.module-title{
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+.module ul{
+  padding-left:0;
+}
+
+.module ul li{
+  list-style:none;
+  margin-bottom:10px;
+}
+
+.module ul li a{
+  text-decoration:none;
+  font-size:14px;
+  color:#374151;
+  padding:6px 10px;
+  display:block;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.module ul li a:hover{
+  background:#2f2f7e;
+  color:white;
+}
+
+.module.current .module-title{
+  padding:6px;
+  border-radius:6px;
+}
+
+/* LOCKED */
+.module.locked{
+  opacity:0.4;
+  pointer-events:none;
+  position:relative;
+}
+
+.module.locked::after{
+  content:"🔒 Complete previous quiz";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#2f2f7e;
+  color:#fff;
+  padding:4px 10px;
+  font-size:11px;
+  border-radius:5px;
+}
+
+/* ===== CONTENT ===== */
+.content-area{
+  flex:1;
+  padding:60px 70px;
+}
+
+.content-box{
+  background:#fff;
+  padding:50px;
+  max-width:900px;
+  margin:auto;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.course-title{
+  font-size:28px;
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:40px;
+  font-weight:700;
+}
+
+.course-desc h2{
+  margin-top:50px;
+  font-size:20px;
+  color:#2f2f7e;
+}
+
+.course-desc p{
+  margin-top:15px;
+  line-height:1.9;
+  font-size:15px;
+  text-align:justify;
+  color:#444;
+}
+
+/* QUIZ BUTTON */
+.quiz-btn{
+  margin-top:50px;
+  padding:14px 35px;
+  background:linear-gradient(90deg,#2f2f7e,#2563eb);
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  font-size:15px;
+  cursor:pointer;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+
+  .curriculum-layout{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    width:100%;
+    border-right:none;
+    border-bottom:3px solid #2f2f7e;
+  }
+
+  .content-area{
+    padding:30px 20px;
+  }
+
+  .content-box{
+    padding:30px 20px;
+  }
+
+  .course-title{
+    font-size:22px;
+  }
+
+  .course-desc h2{
+    font-size:18px;
+  }
+
+  .course-desc p{
+    font-size:14px;
+    line-height:1.7;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="curriculum-layout">
+
+<aside class="sidebar">
+  <h3>Module 3 Outline</h3>
+
+  <div class="module current">
+    <div class="module-title">AI IN ENGLISH LITERATURE</div>
+    <ul>
+      <li><a href="#topic-3-1">3.1 AI & Literary Analysis</a></li>
+      <li><a href="#topic-3-2">3.2 AI in Creative Writing</a></li>
+      <li><a href="#topic-3-3">3.3 AI & Text Mining</a></li>
+      <li><a href="#topic-3-4">3.4 Future of AI</a></li>
+    </ul>
+  </div>
+
+  <div class="module locked" id="module4">
+    <div class="module-title"><a href="module4.html">Module 4</a></div>
+  </div>
+</aside>
+
+<main class="content-area">
+<div class="content-box">
+
+<div class="course-title">AI IN ENGLISH LITERATURE</div>
+
+<div class="course-desc">
+
+<h2 id="topic-3-1">3.1 AI & Literary Analysis</h2>
+<p>AI is transforming literary research and analysis. It examines large text collections efficiently. It identifies themes, patterns, and emotions in novels. Scholars use AI for sentiment analysis. AI detects writing styles across authors. It supports comparative literature studies. AI assists in authorship verification. Digital humanities rely on AI tools. It speeds up research processes. It reveals hidden textual structures. AI analyzes Shakespearean works. It studies genre evolution. AI visualizes character networks. It improves literary databases. It automates classification tasks. AI reduces manual workload. It enhances academic accuracy. It detects plagiarism patterns. It supports historical text analysis. AI modernizes literary scholarship.</p>
+
+<h2 id="topic-3-2">3.2 AI in Creative Writing</h2>
+<p>AI supports creative writing processes. It generates poems and short stories. Writers use AI for idea generation. AI assists in grammar correction. It suggests alternative plot twists. AI can mimic writing styles. It enhances productivity for authors. AI generates dialogues. It supports screenwriting. Creative collaboration with AI grows. It adapts tone and mood. AI assists in publishing workflows. It speeds up editing tasks. It helps structure narratives. AI supports brainstorming. It creates character descriptions. It generates summaries. It enhances storytelling innovation. AI tools inspire writers. Human creativity remains central.</p>
+
+<h2 id="topic-3-3">3.3 AI & Text Mining</h2>
+<p>Text mining extracts meaningful insights from texts. AI processes millions of documents quickly. It detects word frequency patterns. AI identifies literary trends. It clusters similar themes. It analyzes linguistic structures. AI supports digital archives. It improves metadata tagging. It enhances recommendation systems. AI supports library automation. It assists academic research. It finds hidden text relationships. It improves search engines. AI supports plagiarism detection. It summarizes lengthy texts. It supports cultural research. AI organizes digital libraries. It enhances big data analysis. It modernizes research methods. AI expands knowledge discovery.</p>
+
+<h2 id="topic-3-4">3.4 Future of AI in Literature</h2>
+<p>The future of AI in literature is promising. AI will enhance literary education. Personalized learning will grow. AI translation will globalize literature. Smart publishing platforms will expand. AI-generated audiobooks will increase. Digital storytelling will evolve. Authors will collaborate with AI tools. Ethical AI discussions will rise. AI will support cultural preservation. Interactive AI novels may emerge. Literary research will automate further. AI will improve accessibility. AI will expand digital archives. Creative AI policies will develop. Human-AI collaboration will strengthen. AI will assist editors. Literature will become more digital. AI will inspire innovation. Technology and creativity will merge.</p>
+
+<button class="quiz-btn" onclick="goToQuiz()">Take Module 3 Quiz</button>
+
+</div>
+</div>
+</main>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/js/include.js"></script>
+<script>
+loadHTML("header","header.html");
+loadHTML("footer","footer.html");
+
+function goToQuiz(){
+  window.location.href="quiz_module3.html";
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  let highest = parseInt(localStorage.getItem("highestUnlockedModule")) || 1;
+  if(highest >= 4){
+    document.getElementById("module4").classList.remove("locked");
+  }
+});
+</script>
+
+</body>
+</html>

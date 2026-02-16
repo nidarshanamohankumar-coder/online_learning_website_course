@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 2 Quiz | AI For All</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  font-family:'Poppins',sans-serif;
+  background:#eef2f7;
+  margin:0;
+  padding:40px 20px;
+}
+
+.quiz-box{
+  max-width:750px;
+  background:#ffffff;
+  padding:40px;
+  margin:auto;
+  border-radius:12px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+h2{
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:30px;
+}
+
+.question{
+  margin-bottom:25px;
+}
+
+.question p{
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+label{
+  display:block;
+  margin-bottom:6px;
+  cursor:pointer;
+}
+
+input[type="radio"]{
+  margin-right:8px;
+}
+
+.submit-btn{
+  margin-top:25px;
+  padding:12px 30px;
+  background:linear-gradient(90deg,#2f2f7e,#2563eb);
+  color:#fff;
+  border:none;
+  border-radius:25px;
+  font-size:16px;
+  cursor:pointer;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.submit-btn:hover{
+  transform:translateY(-3px);
+}
+
+/* Mobile */
+@media(max-width:600px){
+  .quiz-box{
+    padding:25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="quiz-box">
+  <h2>Module 2 Quiz – தமிழில் செயற்கை நுண்ணறிவு</h2>
+
+  <form id="quizForm">
+
+    <!-- Q1 -->
+    <div class="question">
+      <p>1. செயற்கை நுண்ணறிவு என்பது என்ன?</p>
+      <label><input type="radio" name="q1" value="1"> மனித அறிவாற்றலைப் போன்ற செயல்பாடுகளை இயந்திரங்கள் செய்வது</label>
+      <label><input type="radio" name="q1" value="0"> மனிதன் இயந்திரங்களை உருவாக்குவது</label>
+      <label><input type="radio" name="q1" value="0"> கணினி மட்டும் பயன்படுத்துவது</label>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question">
+      <p>2. Narrow AI என்ன செய்கிறது?</p>
+      <label><input type="radio" name="q2" value="1"> குறிப்பிட்ட பணிகளை மட்டும் செய்கிறது</label>
+      <label><input type="radio" name="q2" value="0"> மனிதனைப் போல சிந்திக்கிறது</label>
+      <label><input type="radio" name="q2" value="0"> உணர்ச்சி வெளிப்படுத்துகிறது</label>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question">
+      <p>3. AI இன் முக்கிய கூறுகளில் ஒன்று எது?</p>
+      <label><input type="radio" name="q3" value="1"> தரவு (Data)</label>
+      <label><input type="radio" name="q3" value="0"> காகிதம்</label>
+      <label><input type="radio" name="q3" value="0"> வண்ணம்</label>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question">
+      <p>4. AI மற்றும் மனிதன் இடையிலான முக்கிய வித்தியாசம் என்ன?</p>
+      <label><input type="radio" name="q4" value="1"> AI வேகமாக தரவை பகுப்பாய்வு செய்கிறது</label>
+      <label><input type="radio" name="q4" value="0"> AI உணர்ச்சி கொண்டது</label>
+      <label><input type="radio" name="q4" value="0"> AI சோர்வடைகிறது</label>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question">
+      <p>5. AI தமிழ் இலக்கியத்தில் எப்படி பயன்படுகிறது?</p>
+      <label><input type="radio" name="q5" value="1"> பழைய நூல்களை டிஜிட்டல் வடிவில் மாற்ற</label>
+      <label><input type="radio" name="q5" value="0"> புத்தகங்களை அழிக்க</label>
+      <label><input type="radio" name="q5" value="0"> மனிதர்களை மாற்ற</label>
+    </div>
+
+    <button type="button" class="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+
+  </form>
+</div>
+
+<script>
+function submitQuiz(){
+
+  let score = 0;
+  let total = 5;
+
+  for(let i=1;i<=total;i++){
+    let selected = document.querySelector('input[name="q'+i+'"]:checked');
+    if(!selected){
+      alert("Please answer all questions.");
+      return;
+    }
+    score += parseInt(selected.value);
+  }
+
+  // PASS MARK = 3/5
+  if(score >= 3){
+
+      let current = parseInt(localStorage.getItem("highestUnlockedModule")) || 1;
+
+      if(current < 3){
+          localStorage.setItem("highestUnlockedModule", 3);
+      }
+
+      alert("Congratulations! You passed.\nModule 3 is now unlocked!");
+
+      window.location.href="module2.html";
+
+  } else {
+
+      alert("You failed. Please try again.");
+  }
+}
+</script>
+
+</body>
+</html>

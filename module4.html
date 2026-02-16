@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI For All | Module 4</title>
+
+<link rel="stylesheet" href="assets/css/common.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#eef2f7;
+}
+
+/* ===== LAYOUT ===== */
+.curriculum-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  width:280px;
+  background:#ffffff;
+  border-right:4px solid #2f2f7e;
+  padding:25px;
+  overflow-y:auto;
+}
+
+.sidebar h3{
+  font-size:18px;
+  margin-bottom:20px;
+  color:#2f2f7e;
+}
+
+.module-title{
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+.module ul{
+  padding-left:0;
+}
+
+.module ul li{
+  list-style:none;
+  margin-bottom:10px;
+}
+
+.module ul li a{
+  text-decoration:none;
+  font-size:14px;
+  color:#374151;
+  padding:6px 10px;
+  display:block;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.module ul li a:hover{
+  background:#2f2f7e;
+  color:white;
+}
+
+.module.current .module-title{
+  padding:6px;
+  border-radius:6px;
+}
+
+/* LOCKED */
+.module.locked{
+  opacity:0.4;
+  pointer-events:none;
+  position:relative;
+}
+
+.module.locked::after{
+  content:"🔒 Complete previous quiz";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#2f2f7e;
+  color:#fff;
+  padding:4px 10px;
+  font-size:11px;
+  border-radius:5px;
+}
+
+/* ===== CONTENT ===== */
+.content-area{
+  flex:1;
+  padding:60px 70px;
+}
+
+.content-box{
+  background:#fff;
+  padding:50px;
+  max-width:900px;
+  margin:auto;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.course-title{
+  font-size:28px;
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:40px;
+  font-weight:700;
+}
+
+.course-desc h2{
+  margin-top:50px;
+  font-size:20px;
+  color:#2f2f7e;
+}
+
+.course-desc p{
+  margin-top:15px;
+  line-height:1.9;
+  font-size:15px;
+  text-align:justify;
+  color:#444;
+}
+
+/* QUIZ BUTTON */
+.quiz-btn{
+  margin-top:50px;
+  padding:14px 35px;
+  background:linear-gradient(90deg,#2f2f7e,#2563eb);
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  font-size:15px;
+  cursor:pointer;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+
+  .curriculum-layout{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    width:100%;
+    border-right:none;
+    border-bottom:3px solid #2f2f7e;
+  }
+
+  .content-area{
+    padding:30px 20px;
+  }
+
+  .content-box{
+    padding:30px 20px;
+  }
+
+  .course-title{
+    font-size:22px;
+  }
+
+  .course-desc h2{
+    font-size:18px;
+  }
+
+  .course-desc p{
+    font-size:14px;
+    line-height:1.7;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="curriculum-layout">
+
+<aside class="sidebar">
+  <h3>Module 4 Outline</h3>
+
+  <div class="module current">
+    <div class="module-title">AI IN MATHEMATICS</div>
+    <ul>
+      <li><a href="#topic-4-1">4.1 AI & Problem Solving</a></li>
+      <li><a href="#topic-4-2">4.2 AI & Statistics</a></li>
+      <li><a href="#topic-4-3">4.3 Mathematical Modeling</a></li>
+      <li><a href="#topic-4-4">4.4 Future Applications</a></li>
+    </ul>
+  </div>
+
+  <div class="module locked" id="module5">
+    <div class="module-title"><a href="module5.html">Module 5</a></div>
+  </div>
+</aside>
+
+<main class="content-area">
+<div class="content-box">
+
+<div class="course-title">AI IN MATHEMATICS</div>
+
+<div class="course-desc">
+
+<div class="course-desc">
+
+<h2 id="topic-4-1">4.1 AI & Problem Solving</h2>
+<p>
+Artificial Intelligence plays a crucial role in modern mathematical problem solving. Traditionally, solving complex mathematical equations required deep theoretical understanding and extensive manual computation. Today, AI-powered systems can analyze large numerical datasets, identify hidden patterns, and generate optimized solutions in significantly less time.
+</p>
+
+<p>
+AI systems are widely used in symbolic computation, numerical optimization, and algorithm design. Machine learning models help detect relationships between variables that may not be immediately visible to human analysts. For example, AI assists in solving nonlinear equations, large matrix operations, and high-dimensional optimization problems that are common in engineering and scientific research.
+</p>
+
+<p>
+AI also enhances computational efficiency by reducing human error and automating repetitive calculations. In industries such as finance, logistics, and manufacturing, AI-driven mathematical models improve operational accuracy and speed. Rather than replacing mathematicians, AI acts as an intelligent assistant that enhances analytical thinking and accelerates complex problem-solving processes.
+</p>
+
+
+<h2 id="topic-4-2">4.2 AI & Statistics</h2>
+<p>
+Statistics forms the foundation of Artificial Intelligence. Every machine learning model is built upon statistical concepts such as probability theory, hypothesis testing, regression analysis, and variance estimation. Without mathematics and statistics, AI systems would not be able to learn from data effectively.
+</p>
+
+<p>
+AI uses statistical techniques to analyze large datasets and make accurate predictions. For example, regression models help predict future outcomes based on historical data, while classification algorithms group similar data points into meaningful categories. Probability distributions enable AI systems to handle uncertainty and make informed decisions even when data is incomplete.
+</p>
+
+<p>
+In real-world applications, AI improves forecasting models used in economics, healthcare, climate science, and business analytics. Statistical learning algorithms continuously update their predictions as new data becomes available. This dynamic learning capability makes AI systems powerful tools for data-driven decision-making across various industries.
+</p>
+
+
+<h2 id="topic-4-3">4.3 Mathematical Modeling</h2>
+<p>
+Mathematical modeling is one of the most important applications of AI in mathematics. AI systems create models that represent real-world phenomena using mathematical equations and algorithms. These models simulate complex systems such as weather patterns, stock market behavior, traffic flow, and population growth.
+</p>
+
+<p>
+Machine learning enhances traditional mathematical modeling by allowing systems to learn patterns directly from data instead of relying only on predefined formulas. For instance, predictive models in healthcare can estimate disease spread, while financial models forecast investment risks using historical trends.
+</p>
+
+<p>
+AI-driven simulations are widely used in engineering, aerospace research, environmental studies, and scientific experimentation. These models reduce the need for costly physical experiments by providing accurate digital simulations. As a result, mathematical modeling powered by AI improves research efficiency, innovation speed, and analytical precision.
+</p>
+
+
+<h2 id="topic-4-4">4.4 Future Applications</h2>
+<p>
+The future of AI in mathematics is highly transformative. Advanced AI systems will continue to automate complex computations, solve large-scale optimization problems, and improve big data analytics. As datasets grow larger and more complex, AI will become essential for interpreting mathematical relationships at scale.
+</p>
+
+<p>
+In education, AI-powered tutoring systems will personalize mathematical learning for students by adapting explanations based on individual understanding levels. In research, AI will assist mathematicians in discovering new theorems and verifying proofs more efficiently.
+</p>
+
+<p>
+Furthermore, the integration of AI with quantum computing may revolutionize mathematical computation by solving problems that are currently impossible with classical computers. The collaboration between human intelligence and artificial intelligence will shape the next generation of mathematical innovation, pushing the boundaries of scientific discovery.
+</p>
+
+<button class="quiz-btn" onclick="goToQuiz()">Take Module 4 Quiz</button>
+
+</div>
+</div>
+</main>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/js/include.js"></script>
+<script>
+loadHTML("header","header.html");
+loadHTML("footer","footer.html");
+
+function goToQuiz(){
+  window.location.href="quiz_module4.html";
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  let highest = parseInt(localStorage.getItem("highestUnlockedModule")) || 1;
+  if(highest >= 5){
+    document.getElementById("module5").classList.remove("locked");
+  }
+});
+</script>
+
+</body>
+</html>

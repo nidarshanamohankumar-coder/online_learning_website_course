@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI For All | Module 8</title>
+
+<link rel="stylesheet" href="assets/css/common.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#eef2f7;
+}
+
+.curriculum-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+.sidebar{
+  width:280px;
+  background:#ffffff;
+  border-right:4px solid #2f2f7e;
+  padding:25px;
+  overflow-y:auto;
+}
+
+.sidebar h3{
+  font-size:18px;
+  margin-bottom:20px;
+  color:#2f2f7e;
+}
+
+.module-title{
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+.module ul{
+  padding-left:0;
+}
+
+.module ul li{
+  list-style:none;
+  margin-bottom:10px;
+}
+
+.module ul li a{
+  text-decoration:none;
+  font-size:14px;
+  color:#374151;
+  padding:6px 10px;
+  display:block;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.module ul li a:hover{
+  background:#2f2f7e;
+  color:white;
+}
+
+.module.locked{
+  opacity:0.4;
+  pointer-events:none;
+  position:relative;
+}
+
+.module.locked::after{
+  content:"🔒 Complete previous quiz";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#2f2f7e;
+  color:#fff;
+  padding:4px 10px;
+  font-size:11px;
+  border-radius:5px;
+}
+
+.content-area{
+  flex:1;
+  padding:60px 70px;
+}
+
+.content-box{
+  background:#fff;
+  padding:50px;
+  max-width:900px;
+  margin:auto;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.course-title{
+  font-size:28px;
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:40px;
+  font-weight:700;
+}
+
+.course-desc h2{
+  margin-top:50px;
+  font-size:20px;
+  color:#2f2f7e;
+}
+
+.course-desc p{
+  margin-top:15px;
+  line-height:1.9;
+  font-size:15px;
+  text-align:justify;
+  color:#444;
+}
+
+.quiz-btn{
+  margin-top:50px;
+  padding:14px 35px;
+  background:linear-gradient(90deg,#2f2f7e,#2563eb);
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  font-size:15px;
+  cursor:pointer;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@media(max-width:900px){
+  .curriculum-layout{ flex-direction:column; }
+  .sidebar{
+    width:100%;
+    border-right:none;
+    border-bottom:3px solid #2f2f7e;
+  }
+  .content-area{ padding:30px 20px; }
+  .content-box{ padding:30px 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="curriculum-layout">
+
+<aside class="sidebar">
+  <h3>Module 8 Outline</h3>
+
+  <div class="module current">
+    <div class="module-title">AI IN INDUSTRIAL</div>
+    <ul>
+      <li><a href="#topic-8-1">8.1 AI in Manufacturing</a></li>
+      <li><a href="#topic-8-2">8.2 AI in Automation</a></li>
+      <li><a href="#topic-8-3">8.3 AI in Supply Chain</a></li>
+      <li><a href="#topic-8-4">8.4 AI in Quality Control</a></li>
+    </ul>
+  </div>
+
+  <div class="module locked" id="module9">
+    <div class="module-title"><a href="module9.html">Module 9</a></div>
+  </div>
+</aside>
+
+<main class="content-area">
+<div class="content-box">
+
+<div class="course-title">AI IN INDUSTRIAL</div>
+
+<div class="course-desc">
+
+<h2 id="topic-8-1">8.1 AI in Manufacturing</h2>
+<p>
+Artificial Intelligence is revolutionizing modern manufacturing industries by introducing smart production systems and intelligent automation. Traditional manufacturing relied heavily on manual supervision and reactive maintenance. However, AI enables predictive and proactive operations that significantly increase productivity and reduce operational costs.
+
+One of the most important applications of AI in manufacturing is predictive maintenance. AI systems continuously monitor machinery using sensors and IoT devices. These systems analyze vibration patterns, temperature variations, and performance metrics to predict potential failures before they occur. This reduces unexpected downtime and increases equipment lifespan.
+
+Robotics integrated with AI allows automated assembly lines to function with high precision. AI-powered industrial robots can adjust movements dynamically, detect errors, and optimize production flow. Machine learning models analyze production data to identify bottlenecks and recommend improvements.
+
+Digital twins—virtual simulations of physical machines—use AI to test production strategies without interrupting real operations. This enhances efficiency, quality, and safety within industrial environments.</p>
+
+<h2 id="topic-8-2">8.2 AI in Automation</h2>
+<p>
+Industrial automation powered by AI enhances operational control systems and reduces human intervention in complex tasks. Intelligent control systems use real-time data to make automatic decisions that optimize production performance.
+
+For example, AI-driven PLC (Programmable Logic Controllers) systems can automatically adjust machine speeds based on demand levels. Reinforcement learning algorithms improve control mechanisms by learning optimal operational strategies over time.
+
+AI also enables collaborative robots (cobots) that work alongside humans safely. These robots use computer vision and sensor fusion to detect human presence and adjust movements accordingly. This improves workplace safety and reduces industrial accidents.
+
+Energy optimization is another major application. AI analyzes power consumption patterns and optimizes energy distribution within factories, reducing costs and environmental impact.</p>
+
+<h2 id="topic-8-3">8.3 AI in Supply Chain</h2>
+<p>
+Supply chain management is a critical component of industrial success. AI enhances supply chain efficiency by providing accurate demand forecasting and inventory optimization.
+
+Machine learning models analyze historical sales data, seasonal trends, and market fluctuations to predict future demand accurately. This prevents overproduction and reduces inventory waste.
+
+AI-powered route optimization systems calculate the most efficient delivery paths, minimizing fuel consumption and transportation costs. Real-time tracking systems provide visibility into shipment status and detect potential delays.
+
+In warehouse management, AI-driven robots automate picking, sorting, and packaging processes. Automated guided vehicles (AGVs) use AI to navigate warehouses efficiently.
+
+By integrating AI with supply chain systems, industries achieve faster deliveries, cost savings, and improved customer satisfaction.</p>
+
+<h2 id="topic-8-4">8.4 AI in Quality Control</h2>
+<p>
+Quality assurance is essential in industrial production. AI-based quality control systems use computer vision and deep learning to inspect products with greater accuracy than manual inspection.
+
+High-resolution cameras capture product images during production. AI models analyze these images to detect defects such as cracks, color variations, alignment errors, or surface damage. These inspections occur in real-time without slowing production speed.
+
+AI reduces human error and ensures consistent quality standards. It also generates automated reports that help identify recurring production issues.
+
+Additionally, AI-powered root cause analysis identifies the source of manufacturing defects. This enables industries to correct problems early and maintain high product reliability.
+<button class="quiz-btn" onclick="goToQuiz()">Take Module 8 Quiz</button>
+
+</div>
+</div>
+</main>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/js/include.js"></script>
+<script>
+loadHTML("header","header.html");
+loadHTML("footer","footer.html");
+
+function goToQuiz(){
+  window.location.href="quiz_module8.html";
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  let highest = parseInt(localStorage.getItem("highestUnlockedModule")) || 1;
+  if(highest >= 9){
+    document.getElementById("module9").classList.remove("locked");
+  }
+});
+</script>
+
+</body>
+</html>

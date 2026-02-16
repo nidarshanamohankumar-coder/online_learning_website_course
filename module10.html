@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI For All | Module 10</title>
+
+<link rel="stylesheet" href="assets/css/common.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#eef2f7;
+}
+
+.curriculum-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+.sidebar{
+  width:280px;
+  background:#ffffff;
+  border-right:4px solid #2f2f7e;
+  padding:25px;
+  overflow-y:auto;
+}
+
+.sidebar h3{
+  font-size:18px;
+  margin-bottom:20px;
+  color:#2f2f7e;
+}
+
+.module-title{
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+.module ul{
+  padding-left:0;
+}
+
+.module ul li{
+  list-style:none;
+  margin-bottom:10px;
+}
+
+.module ul li a{
+  text-decoration:none;
+  font-size:14px;
+  color:#374151;
+  padding:6px 10px;
+  display:block;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.module ul li a:hover{
+  background:#2f2f7e;
+  color:white;
+}
+
+.content-area{
+  flex:1;
+  padding:60px 70px;
+}
+
+.content-box{
+  background:#fff;
+  padding:50px;
+  max-width:900px;
+  margin:auto;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.course-title{
+  font-size:28px;
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:40px;
+  font-weight:700;
+}
+
+.course-desc h2{
+  margin-top:50px;
+  font-size:20px;
+  color:#2f2f7e;
+}
+
+.course-desc p{
+  margin-top:15px;
+  line-height:1.9;
+  font-size:15px;
+  text-align:justify;
+  color:#444;
+}
+
+.quiz-btn{
+  margin-top:50px;
+  padding:14px 35px;
+  background:linear-gradient(90deg,#2f2f7e,#2563eb);
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+  display:block;
+  margin:auto;
+}
+
+@media(max-width:900px){
+  .curriculum-layout{ flex-direction:column; }
+  .sidebar{
+    width:100%;
+    border-right:none;
+    border-bottom:3px solid #2f2f7e;
+  }
+  .content-area{ padding:30px 20px; }
+  .content-box{ padding:30px 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="curriculum-layout">
+
+<aside class="sidebar">
+  <h3>Module 10 Outline</h3>
+
+  <div class="module current">
+    <div class="module-title">CONCLUSION IN AI</div>
+    <ul>
+      <li><a href="#topic-10-1">10.1 Evolution of AI</a></li>
+      <li><a href="#topic-10-2">10.2 Impact of AI on Society</a></li>
+      <li><a href="#topic-10-3">10.3 Ethical & Responsible AI</a></li>
+      <li><a href="#topic-10-4">10.4 Future of AI</a></li>
+      <li><a href="#topic-10-5">10.5 Final Thoughts</a></li>
+    </ul>
+  </div>
+</aside>
+
+<main class="content-area">
+<div class="content-box">
+
+<div class="course-title">CONCLUSION IN AI</div>
+
+<div class="course-desc">
+
+<h2 id="topic-10-1">10.1 Evolution of AI</h2>
+<p>
+Artificial Intelligence has evolved from rule-based systems to advanced deep learning architectures capable of solving complex real-world problems. Early AI systems relied on symbolic reasoning and predefined logic. Modern AI leverages neural networks, big data, and cloud computing to achieve high levels of accuracy and adaptability.
+AI is no longer a theoretical concept but a practical technology integrated into industries, education, healthcare, and daily life.
+</p>
+
+<h2 id="topic-10-2">10.2 Impact of AI on Society</h2>
+<p>
+AI significantly impacts economic growth, productivity, and innovation. It automates repetitive tasks while enhancing human decision-making. However, AI also raises concerns regarding job displacement, privacy issues, and digital inequality. The balance between automation and human involvement is essential for sustainable AI integration.
+</p>
+
+<h2 id="topic-10-3">10.3 Ethical & Responsible AI</h2>
+<p>
+Responsible AI ensures fairness, transparency, accountability, and security. Ethical AI systems avoid bias, protect user data, and operate under regulatory standards. Organizations must implement explainable AI models to maintain trust and reliability.
+</p>
+
+<h2 id="topic-10-4">10.4 Future of AI</h2>
+<p>
+Future AI developments include Generative AI, Artificial General Intelligence (AGI), human-AI collaboration systems, and advanced robotics. AI will continue to expand across industries, supporting innovation and intelligent automation.
+</p>
+
+<h2 id="topic-10-5">10.5 Final Thoughts</h2>
+<p>
+AI is not meant to replace humans but to augment human capabilities. The successful future of AI depends on responsible development, continuous learning, and ethical implementation. Understanding AI fundamentals empowers individuals to adapt and thrive in an AI-driven world.
+</p>
+
+<button class="quiz-btn" onclick="goToQuiz()">Start Final Quiz</button>
+
+</div>
+</div>
+</main>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/js/include.js"></script>
+<script>
+loadHTML("header","header.html");
+loadHTML("footer","footer.html");
+
+function goToQuiz(){
+  window.location.href="quiz_questions.html";
+}
+</script>
+
+</body>
+</html>

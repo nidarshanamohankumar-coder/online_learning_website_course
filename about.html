@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Akshayam360</title>
+
+<link rel="stylesheet" href="assets/css/common.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#eef2f7;
+}
+
+/* ===== HERO SECTION ===== */
+.about-hero{
+  background:linear-gradient(90deg,#2f2f7e,#2563eb);
+  color:#fff;
+  text-align:center;
+  padding:80px 20px;
+}
+
+.about-hero h1{
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.about-hero p{
+  max-width:700px;
+  margin:auto;
+  font-size:16px;
+  line-height:1.7;
+}
+
+/* ===== CONTENT SECTION ===== */
+.about-section{
+  padding:70px 80px;
+}
+
+.about-container{
+  max-width:1000px;
+  margin:auto;
+  background:#fff;
+  padding:60px;
+  border-radius:18px;
+  box-shadow:0 20px 45px rgba(0,0,0,0.08);
+}
+
+.about-container h2{
+  color:#2f2f7e;
+  margin-top:40px;
+  font-size:24px;
+}
+
+.about-container p{
+  margin-top:15px;
+  line-height:1.9;
+  font-size:15px;
+  color:#444;
+  text-align:justify;
+}
+
+/* ===== FEATURES GRID ===== */
+.features-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.feature-box{
+  background:#f9fafb;
+  padding:25px;
+  border-radius:12px;
+  border-left:4px solid #2f2f7e;
+}
+
+.feature-box h4{
+  margin-bottom:10px;
+  color:#111;
+}
+
+.feature-box p{
+  font-size:14px;
+  line-height:1.6;
+  color:#555;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .about-section{
+    padding:50px 30px;
+  }
+
+  .about-container{
+    padding:40px 25px;
+  }
+
+  .about-hero h1{
+    font-size:30px;
+  }
+}
+
+@media(max-width:600px){
+  .about-hero{
+    padding:60px 20px;
+  }
+
+  .about-hero h1{
+    font-size:24px;
+  }
+
+  .about-container h2{
+    font-size:20px;
+  }
+
+  .about-container p{
+    font-size:14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="about-hero">
+  <h1>About Akshayam360</h1>
+  <p>
+    Akshayam360 is a modern e-learning platform designed to make Artificial Intelligence and
+    technology education accessible to everyone. We believe learning should be simple,
+    practical, and future-ready.
+  </p>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="about-section">
+  <div class="about-container">
+
+    <h2>Our Mission</h2>
+    <p>
+      Our mission is to provide high-quality, accessible, and industry-relevant AI education.
+      We aim to bridge the gap between theoretical knowledge and real-world applications
+      by offering structured modules, quizzes, and hands-on learning experiences.
+    </p>
+
+    <h2>Our Vision</h2>
+    <p>
+      We envision a future where technology education is available to all learners,
+      regardless of background. Akshayam360 strives to empower students with the skills
+      required to succeed in the AI-driven digital world.
+    </p>
+
+    <h2>Why Choose Us?</h2>
+
+    <div class="features-grid">
+
+      <div class="feature-box">
+        <h4>Structured Learning</h4>
+        <p>
+          Step-by-step modules from beginner to advanced levels with quizzes and certification.
+        </p>
+      </div>
+
+      <div class="feature-box">
+        <h4>Practical Knowledge</h4>
+        <p>
+          Real-world examples and industry-focused content to build job-ready skills.
+        </p>
+      </div>
+
+      <div class="feature-box">
+        <h4>Accessible Education</h4>
+        <p>
+          Designed to be simple and understandable for students from all backgrounds.
+        </p>
+      </div>
+
+      <div class="feature-box">
+        <h4>Future-Oriented</h4>
+        <p>
+          Focused on emerging technologies like AI, Machine Learning, and Responsible AI.
+        </p>
+      </div>
+
+    </div>
+
+    <h2>Our Future Goals</h2>
+    <p>
+      We aim to expand our course catalog, introduce live workshops, add certification
+      programs, and integrate advanced AI learning tools. Our goal is to build a strong
+      learning ecosystem that supports innovation and continuous growth.
+    </p>
+
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script src="assets/js/include.js"></script>
+<script>
+loadHTML("header","header.html");
+loadHTML("footer","footer.html");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI For All | Module 1</title>
+
+<link rel="stylesheet" href="assets/css/common.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#eef2f7;
+}
+
+/* ===== LAYOUT ===== */
+.curriculum-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  width:300px;
+  background:#ffffff;
+  border-right:4px solid #2f2f7e;
+  padding:30px 25px;
+  overflow-y:auto;
+}
+
+.sidebar h3{
+  font-size:18px;
+  margin-bottom:25px;
+  color:#2f2f7e;
+  font-weight:600;
+}
+
+.module-title{
+  font-weight:600;
+  font-size:15px;
+  margin-bottom:15px;
+}
+
+.module ul{
+  padding-left:0;
+}
+
+.module ul li{
+  list-style:none;
+  margin-bottom:12px;
+}
+
+.module ul li a{
+  text-decoration:none;
+  font-size:14px;
+  color:#374151;
+  padding:8px 12px;
+  display:block;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.module ul li a:hover{
+  background:#2f2f7e;
+  color:white;
+  padding-left:18px;
+}
+
+/* LOCKED */
+.module.locked{
+  opacity:0.4;
+  pointer-events:none;
+  position:relative;
+}
+
+.module.locked::after{
+  content:"🔒 Complete previous quiz";
+  position:absolute;
+  top:45%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#2f2f7e;
+  color:#fff;
+  padding:6px 12px;
+  font-size:12px;
+  border-radius:6px;
+}
+
+/* ===== CONTENT ===== */
+.content-area{
+  flex:1;
+  padding:70px 80px;
+}
+
+.content-box{
+  background:#fff;
+  padding:60px;
+  max-width:950px;
+  margin:auto;
+  border-radius:18px;
+  box-shadow:0 25px 50px rgba(0,0,0,0.08);
+}
+
+.course-title{
+  font-size:34px;
+  font-weight:700;
+  text-align:center;
+  color:#2f2f7e;
+  margin-bottom:50px;
+}
+
+.course-title::after{
+  content:"";
+  width:70px;
+  height:4px;
+  background:#facc15;
+  display:block;
+  margin:12px auto 0;
+  border-radius:10px;
+}
+
+/* ===== TEXT ALIGNMENT ===== */
+.course-desc h2{
+  margin-top:70px;
+  font-size:22px;
+  color:#2f2f7e;
+}
+
+.course-desc p{
+  margin-top:20px;
+  line-height:2;
+  font-size:15.5px;
+  color:#444;
+  text-align:justify;
+  letter-spacing:0.3px;
+}
+
+/* QUIZ BUTTON */
+.quiz-btn{
+  margin-top:70px;
+  padding:15px 40px;
+  background:linear-gradient(90deg,#2f2f7e,#2563eb);
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
+
+.quiz-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .courses-page {
+    padding: 50px 40px;
+  }
+
+  .courses-title {
+    font-size: 32px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+
+  .curriculum-layout{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    width:100%;
+    border-right:none;
+    border-bottom:3px solid #2f2f7e;
+  }
+
+  .content-area{
+    padding:30px 20px;
+  }
+
+  .content-box{
+    padding:30px 20px;
+  }
+
+  .course-title{
+    font-size:22px;
+  }
+
+  .course-desc h2{
+    font-size:18px;
+  }
+
+  .course-desc p{
+    font-size:14px;
+    line-height:1.7;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="curriculum-layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <h3>Module 1 Outline</h3>
+
+  <div class="module">
+    <div class="module-title">Introduction to AI For All</div>
+    <ul>
+      <li><a href="#topic-1-1">1.1 What is AI For All?</a></li>
+      <li><a href="#topic-1-2">1.2 Why AI Accessibility Matters</a></li>
+      <li><a href="#topic-1-3">1.3 Ethical Use of AI</a></li>
+      <li><a href="#topic-1-4">1.4 Future of AI For All</a></li>
+    </ul>
+  </div>
+
+  <!-- LOCKED MODULES -->
+  <div class="module locked" id="module2"><div class="module-title"><a href="module2.html">Module 2</a></div></div>
+  <div class="module locked" id="module3"><div class="module-title"><a href="module3.html">Module 3</a></div></div>
+  <div class="module locked" id="module4"><div class="module-title"><a href="module4.html">Module 4</a></div></div>
+  <div class="module locked" id="module5"><div class="module-title"><a href="module5.html">Module 5</a></div></div>
+  <div class="module locked" id="module6"><div class="module-title"><a href="module6.html">Module 6</a></div></div>
+  <div class="module locked" id="module7"><div class="module-title"><a href="module7.html">Module 7</a></div></div>
+  <div class="module locked" id="module8"><div class="module-title"><a href="module8.html">Module 8</a></div></div>
+  <div class="module locked" id="module9"><div class="module-title"><a href="module9.html">Module 9</a></div></div>
+  <div class="module locked" id="module10"><div class="module-title"><a href="module10.html">Module 10</a></div></div>
+
+</aside>
+
+<!-- CONTENT -->
+<main class="content-area">
+<div class="content-box">
+
+<div class="course-title">AI FOR ALL</div>
+
+<div class="course-desc">
+
+<h2 id="topic-1-1">1.1 What is AI For All?</h2>
+<p>
+Artificial Intelligence is the simulation of human intelligence in machines designed to think and learn.
+AI systems can analyze data and identify patterns.
+They make predictions based on previous experiences.
+AI For All focuses on making AI knowledge accessible to everyone.
+It reduces technical complexity for beginners.
+AI powers recommendation engines.
+It enhances healthcare diagnostics.
+AI improves education platforms.
+Smart assistants rely on AI.
+AI supports automation in industries.
+Machine learning is a subset of AI.
+AI improves decision making.
+It supports fraud detection systems.
+AI enables personalized experiences.
+AI contributes to smart city infrastructure.
+It optimizes transportation networks.
+AI helps environmental monitoring.
+AI increases operational efficiency.
+It supports research innovation.
+AI For All ensures inclusive technological growth.
+</p>
+
+<h2 id="topic-1-2">1.2 Why AI Accessibility Matters</h2>
+<p>
+AI accessibility ensures technology benefits all communities.
+It bridges digital gaps between rural and urban areas.
+Students from any background can learn AI.
+Accessible AI tools empower small businesses.
+AI translation removes language barriers.
+Voice assistants support differently-abled users.
+Affordable AI promotes equality.
+AI literacy strengthens society.
+It encourages responsible innovation.
+Accessible AI boosts economic development.
+Healthcare becomes more reachable through AI.
+AI enhances smart agriculture.
+It improves online education.
+AI fosters entrepreneurship.
+It creates new job opportunities.
+Inclusive AI reduces bias.
+Transparent AI builds trust.
+Governments can improve services with AI.
+Accessible AI supports sustainable development.
+AI For All builds a fair technological future.
+</p>
+
+<h2 id="topic-1-3">1.3 Ethical Use of AI</h2>
+<p>
+Ethical AI ensures fairness and transparency.
+AI must avoid discrimination.
+Developers must minimize bias in datasets.
+Privacy protection is essential.
+AI systems should be explainable.
+Human oversight is necessary.
+AI must respect legal regulations.
+Security protects AI from misuse.
+Transparency builds trust.
+Responsible AI prevents harm.
+Ethical standards guide development.
+Inclusive design reduces inequality.
+Data handling must be secure.
+AI should serve social good.
+Accountability frameworks are important.
+AI must avoid misinformation.
+Fair datasets improve fairness.
+Responsible innovation ensures safety.
+Trustworthy AI supports adoption.
+Ethical AI is central to AI For All.
+</p>
+
+<h2 id="topic-1-4">1.4 Future of AI For All</h2>
+<p>
+The future of AI focuses on inclusivity.
+AI education will expand globally.
+Personalized learning will improve.
+Healthcare will become predictive.
+Automation will transform industries.
+New AI careers will emerge.
+Research will accelerate innovation.
+Affordable AI tools will increase.
+Responsible AI will be mandatory.
+Human-AI collaboration will grow.
+AI will support sustainability.
+Smart infrastructure will develop.
+Digital transformation will expand.
+AI ecosystems will interconnect.
+Advanced robotics will evolve.
+AI will enhance communication.
+Data analytics will improve decisions.
+AI literacy will spread worldwide.
+Innovation will drive progress.
+AI For All will shape a smarter world.
+</p>
+
+<button class="quiz-btn" onclick="goToQuiz()">Take Module 1 Quiz</button>
+
+</div>
+</div>
+</main>
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/js/include.js"></script>
+<script>
+loadHTML("header","header.html");
+loadHTML("footer","footer.html");
+
+function goToQuiz(){
+  window.location.href="quiz_module1.html";
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  let highest = parseInt(localStorage.getItem("highestUnlockedModule")) || 1;
+  for(let i=2;i<=10;i++){
+    const mod=document.getElementById("module"+i);
+    if(mod && i<=highest){
+      mod.classList.remove("locked");
+    }
+  }
+});
+</script>
+
+</body>
+</html>

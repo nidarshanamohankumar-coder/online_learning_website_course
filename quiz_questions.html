@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Quiz | AI For All</title>
+
+<link rel="stylesheet" href="assets/css/common.css">
+
+<style>
+body{
+  font-family:"Segoe UI", Arial, sans-serif;
+  background:#f3f4f6;
+  margin:0;
+}
+
+.page-wrapper{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+.quiz-area{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px;
+}
+
+.quiz-wrapper{
+  width:700px;
+  max-width:100%;
+  background:#ffffff;
+  padding:35px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.quiz-header{
+  margin-bottom:20px;
+}
+
+.quiz-header h2{
+  margin:0;
+  color:#1f2937;
+  font-size:22px;
+}
+
+.progress-bar{
+  width:100%;
+  height:8px;
+  background:#e5e7eb;
+  border-radius:10px;
+  overflow:hidden;
+  margin-top:15px;
+}
+
+.progress-fill{
+  height:100%;
+  width:0%;
+  background:#2f2f7e;
+  transition:width 0.4s ease;
+}
+
+.question{
+  margin-top:30px;
+  font-size:18px;
+  font-weight:600;
+  color:#111827;
+}
+
+.option{
+  margin-top:15px;
+  padding:14px;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+  font-size:15px;
+}
+
+.option:hover{
+  background:#f0fdf4;
+}
+
+.option.selected{
+  background:#dcfce7;
+  border-color:#22c55e;
+  font-weight:600;
+}
+
+.controls{
+  display:flex;
+  justify-content:space-between;
+  margin-top:35px;
+  gap:10px;
+}
+
+button{
+  padding:12px 22px;
+  border:none;
+  border-radius:6px;
+  font-size:15px;
+  cursor:pointer;
+}
+
+.prev-btn,
+.next-btn{
+  background:#2f2f7e;
+  color:#fff;
+}
+
+/* 🔥 Mobile Responsive */
+@media(max-width:600px){
+  .quiz-area{
+    padding:20px;
+  }
+
+  .quiz-wrapper{
+    padding:20px;
+  }
+
+  .question{
+    font-size:16px;
+  }
+
+  .option{
+    font-size:14px;
+  }
+
+  .controls{
+    flex-direction:column;
+  }
+
+  button{
+    width:100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+<div id="header"></div>
+
+<div class="quiz-area">
+<div class="quiz-wrapper">
+
+<div class="quiz-header">
+<h2>Final Quiz – AI For All</h2>
+<div class="progress-bar">
+<div class="progress-fill" id="progress"></div>
+</div>
+</div>
+
+<div id="quizContent"></div>
+
+<div class="controls">
+<button class="prev-btn" onclick="prevQuestion()">Previous</button>
+<button class="next-btn" onclick="nextQuestion()">Next</button>
+</div>
+
+</div>
+</div>
+
+<div id="footer"></div>
+
+</div>
+
+<script src="assets/js/include.js"></script>
+<script>
+loadHTML("header","header.html");
+loadHTML("footer","footer.html");
+
+/* 🔥 Updated Questions Based On All 10 Modules */
+const questions = [
+
+{q:"1. What is the main goal of Artificial Intelligence?", 
+ options:["To simulate human intelligence","To replace the internet"], ans:0},
+
+{q:"2. Which concept is the foundation of Machine Learning?", 
+ options:["Learning from data","Manual programming only"], ans:0},
+
+{q:"3. Deep Learning primarily uses?", 
+ options:["Artificial Neural Networks","HTML Tags"], ans:0},
+
+{q:"4. NLP (Natural Language Processing) helps machines to?", 
+ options:["Understand human language","Repair hardware"], ans:0},
+
+{q:"5. In management, AI helps businesses mainly by?", 
+ options:["Data-driven decision making","Avoiding analytics"], ans:0},
+
+{q:"6. AI in Computer Science improves cybersecurity through?", 
+ options:["Threat detection systems","Ignoring attacks"], ans:0},
+
+{q:"7. AI in Industrial applications improves?", 
+ options:["Predictive maintenance & automation","Manual errors"], ans:0},
+
+{q:"8. AI in everyday life is commonly seen in?", 
+ options:["Smartphones & recommendation systems","Typewriters"], ans:0},
+
+{q:"9. Responsible AI focuses on?", 
+ options:["Fairness, transparency & ethics","Speed without rules"], ans:0},
+
+{q:"10. The future of AI depends on?", 
+ options:["Human-AI collaboration","Complete human replacement"], ans:0}
+
+];
+
+let current = 0;
+let answers = new Array(questions.length).fill(null);
+
+function loadQuestion(){
+const q = questions[current];
+document.getElementById("quizContent").innerHTML = `
+<div class="question">${q.q}</div>
+${q.options.map((opt,i)=>`
+<div class="option ${answers[current]===i?'selected':''}" onclick="selectOption(${i})">
+${opt}
+</div>`).join("")}
+`;
+
+document.getElementById("progress").style.width =
+((current+1)/questions.length)*100 + "%";
+}
+
+function selectOption(i){
+answers[current] = i;
+loadQuestion();
+}
+
+function nextQuestion(){
+if(current < questions.length-1){
+current++;
+loadQuestion();
+}else{
+submitQuiz();
+}
+}
+
+function prevQuestion(){
+if(current > 0){
+current--;
+loadQuestion();
+}
+}
+
+function submitQuiz(){
+let score = 0;
+answers.forEach((a,i)=>{
+if(a === questions[i].ans) score++;
+});
+
+localStorage.setItem("quizScore", score);
+
+if(score >= 6){
+localStorage.setItem("quizPassed","true");
+window.location.href = "certificate.html";
+}else{
+alert("You scored "+score+"/10. Minimum 6 required. Try again.");
+current = 0;
+answers.fill(null);
+loadQuestion();
+}
+}
+
+loadQuestion();
+</script>
+
+</body>
+</html>
